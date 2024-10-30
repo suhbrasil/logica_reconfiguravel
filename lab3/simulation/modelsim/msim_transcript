@@ -1,0 +1,84 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do lab3_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {lab3_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity lab3
+# -- Compiling architecture structure of lab3
+# 
+vcom -reportprogress 300 -work work C:/Users/suzib/OneDrive/Documentos/logicaReconfiguravel/lab3/lab3.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity lab3
+# -- Compiling architecture X of lab3
+vcom -reportprogress 300 -work work C:/Users/suzib/OneDrive/Documentos/logicaReconfiguravel/lab3/lab3_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity lab3_tb
+# -- Compiling architecture X1 of lab3_tb
+vsim +altera -do lab3_run_msim_gate_vhdl.do -l msim_transcript -gui gate_work.lab3_tb
+# vsim +altera -do lab3_run_msim_gate_vhdl.do -l msim_transcript -gui gate_work.lab3_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading gate_work.lab3_tb(x1)
+# Loading gate_work.lab3(x)
+# do lab3_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {lab3_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity lab3
+# -- Compiling architecture structure of lab3
+# 
+add wave -position insertpoint  \
+sim:/lab3_tb/clk \
+sim:/lab3_tb/rst \
+sim:/lab3_tb/EN \
+sim:/lab3_tb/CLR \
+sim:/lab3_tb/LD \
+sim:/lab3_tb/LOAD \
+sim:/lab3_tb/Q_IN \
+sim:/lab3_tb/ID \
+sim:/lab3_tb/Q
+run 500 ns
+run 800 ns
