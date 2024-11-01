@@ -14,7 +14,6 @@ component lab3 is
 	     CLK: in std_logic;
 		  Q: out unsigned(2 downto 0);
 		  Q_IN: in unsigned(3 downto 0);
-		  ID: out integer range 0 to 4;
 		  EN: in std_logic;
 		  CLR: in std_logic;
 		  LD:  in std_logic;
@@ -24,7 +23,6 @@ end component;
 Signal clk, rst : std_logic;
 Signal EN, CLR, LD : std_logic;
 signal LOAD , Q_IN: unsigned (3 downto 0);
-signal ID: integer range 0 to 4;
 signal Q: unsigned(2 downto 0);
 
 begin
@@ -34,7 +32,6 @@ begin
        RST  => rst , 
        CLK  => clk ,
 		 Q    => Q ,
-		 ID => ID,
 		 Q_IN => Q_IN,
        EN   => EN  ,
        CLR  => CLR ,

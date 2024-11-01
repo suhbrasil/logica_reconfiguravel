@@ -21,9 +21,11 @@
 # -- Loading package altera_primitives_components
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
+# -- Loading package NUMERIC_STD
 # -- Compiling entity lab3
 # -- Compiling architecture structure of lab3
 # 
+# Load canceled
 vcom -reportprogress 300 -work work C:/Users/suzib/OneDrive/Documentos/logicaReconfiguravel/lab3/lab3.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -67,6 +69,7 @@ vsim +altera -do lab3_run_msim_gate_vhdl.do -l msim_transcript -gui gate_work.la
 # -- Loading package altera_primitives_components
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
+# -- Loading package NUMERIC_STD
 # -- Compiling entity lab3
 # -- Compiling architecture structure of lab3
 # 
@@ -78,7 +81,5 @@ sim:/lab3_tb/CLR \
 sim:/lab3_tb/LD \
 sim:/lab3_tb/LOAD \
 sim:/lab3_tb/Q_IN \
-sim:/lab3_tb/ID \
 sim:/lab3_tb/Q
-run 500 ns
 run 800 ns
