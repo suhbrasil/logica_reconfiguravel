@@ -12,7 +12,7 @@ Architecture X1 of lab3_tb is
 component lab3 is
    PORT(RST: in std_logic;
 	     CLK: in std_logic;
-		  Q: out unsigned(2 downto 0);
+		  Q_FOR, Q_WHILE, Q_CASE, Q_IF, Q_SUM: out unsigned(2 downto 0);  -- Saídas para cada contador
 		  Q_IN: in unsigned(3 downto 0);
 		  EN: in std_logic;
 		  CLR: in std_logic;
@@ -23,7 +23,7 @@ end component;
 Signal clk, rst : std_logic;
 Signal EN, CLR, LD : std_logic;
 signal LOAD , Q_IN: unsigned (3 downto 0);
-signal Q: unsigned(2 downto 0);
+signal Q_FOR, Q_WHILE, Q_CASE, Q_IF, Q_SUM: unsigned(2 downto 0);
 
 begin
 
@@ -31,7 +31,11 @@ begin
 	DUT: lab3 port map(
        RST  => rst , 
        CLK  => clk ,
-		 Q    => Q ,
+		 Q_FOR => Q_FOR ,
+		 Q_WHILE => Q_WHILE ,
+		 Q_CASE => Q_CASE ,
+		 Q_IF  => Q_IF ,
+		 Q_SUM => Q_SUM ,
 		 Q_IN => Q_IN,
        EN   => EN  ,
        CLR  => CLR ,
@@ -65,15 +69,23 @@ end process;
 
 Process
 begin
-	Q_IN <= "0111";
-	wait for 110 ns;
 	Q_IN <= "0000";
-	wait for 100 ns;
+	wait for 30 ns;
+	Q_IN <= "0000";
+	wait for 20 ns;
 	Q_IN <= "0001";
-	wait for 100 ns;
+	wait for 20 ns;
 	Q_IN <= "1111";
-	wait for 100 ns;
+	wait for 20 ns;
 	Q_IN <= "1010";
+	wait for 20 ns;
+	Q_IN <= "1100";
+	wait for 20 ns;
+	Q_IN <= "0100";
+	wait for 20 ns;
+	Q_IN <= "1110";
+	wait for 20 ns;
+	Q_IN <= "0110";
 	wait;
 end process;
 

@@ -22,10 +22,21 @@
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
 # -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
 # -- Compiling entity lab3
 # -- Compiling architecture structure of lab3
+# ** Error: lab3_6_1200mv_85c_slow.vho(139): (vcom-1078) Identifier "UNSIGNED" is not directly visible.
 # 
-# Load canceled
+#    Potentially visible declarations are:
+#         ieee.std_logic_arith.UNSIGNED (type declaration)
+#         ieee.NUMERIC_STD.UNSIGNED (subtype declaration)
+# 
+# ** Error: lab3_6_1200mv_85c_slow.vho(682): VHDL Compiler exiting
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./lab3_run_msim_gate_vhdl.do line 8
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {lab3_6_1200mv_85c_slow.vho}"
 vcom -reportprogress 300 -work work C:/Users/suzib/OneDrive/Documentos/logicaReconfiguravel/lab3/lab3.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -70,9 +81,21 @@ vsim +altera -do lab3_run_msim_gate_vhdl.do -l msim_transcript -gui gate_work.la
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
 # -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
 # -- Compiling entity lab3
 # -- Compiling architecture structure of lab3
+# ** Error: lab3_6_1200mv_85c_slow.vho(139): (vcom-1078) Identifier "UNSIGNED" is not directly visible.
 # 
+#    Potentially visible declarations are:
+#         ieee.std_logic_arith.UNSIGNED (type declaration)
+#         ieee.NUMERIC_STD.UNSIGNED (subtype declaration)
+# 
+# ** Error: lab3_6_1200mv_85c_slow.vho(682): VHDL Compiler exiting
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./lab3_run_msim_gate_vhdl.do line 8
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {lab3_6_1200mv_85c_slow.vho}"
 add wave -position insertpoint  \
 sim:/lab3_tb/clk \
 sim:/lab3_tb/rst \
@@ -81,5 +104,6 @@ sim:/lab3_tb/CLR \
 sim:/lab3_tb/LD \
 sim:/lab3_tb/LOAD \
 sim:/lab3_tb/Q_IN \
+sim:/lab3_tb/ID \
 sim:/lab3_tb/Q
-run 800 ns
+run 500 ns
