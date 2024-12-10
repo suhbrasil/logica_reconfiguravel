@@ -1,0 +1,107 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do cronometro_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {cronometro.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro
+# -- Compiling architecture structure of cronometro
+# 
+vcom -reportprogress 300 -work work C:/QuartusProjects/cronometro2/bcd_7seg.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_7seg
+# -- Compiling architecture a_bcd_7seg of bcd_7seg
+vcom -reportprogress 300 -work work C:/QuartusProjects/cronometro2/cont4.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cont4
+# -- Compiling architecture a_cont4 of cont4
+vcom -reportprogress 300 -work work C:/QuartusProjects/cronometro2/cronometro.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro
+# -- Compiling architecture a_cronometro of cronometro
+vcom -reportprogress 300 -work work C:/QuartusProjects/cronometro2/cronometro_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro_tb
+# -- Compiling architecture X1 of cronometro_tb
+vsim +altera -do cronometro_run_msim_gate_vhdl.do -l msim_transcript -gui gate_work.cronometro_tb
+# vsim +altera -do cronometro_run_msim_gate_vhdl.do -l msim_transcript -gui gate_work.cronometro_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading gate_work.cronometro_tb(x1)
+# Loading gate_work.cronometro(a_cronometro)
+# Loading gate_work.cont4(a_cont4)
+# Loading gate_work.bcd_7seg(a_bcd_7seg)
+# do cronometro_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {cronometro.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cronometro
+# -- Compiling architecture structure of cronometro
+# 
+add wave -position insertpoint  \
+sim:/cronometro_tb/clk \
+sim:/cronometro_tb/rst \
+sim:/cronometro_tb/EN \
+sim:/cronometro_tb/CLR \
+sim:/cronometro_tb/sig_q_segundo_dezena \
+sim:/cronometro_tb/sig_q_segundo_unidade \
+sim:/cronometro_tb/sig_q_centesimo_dezena \
+sim:/cronometro_tb/sig_q_centesimo_unidade \
+sim:/cronometro_tb/sig_seg_s_u \
+sim:/cronometro_tb/sig_seg_s_d \
+sim:/cronometro_tb/sig_seg_c_u \
+sim:/cronometro_tb/sig_seg_c_d
+run 10000 ns
+run 2 s
+# Invalid time value: 2 s
+run 1000000000 ns
+# Break key hit 
+# Simulation stop requested.
