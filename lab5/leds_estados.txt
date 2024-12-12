@@ -1,0 +1,6 @@
+LEDR 17 - rd_enable
+LEDR 16 - wr_enable
+LEDR 15 - rd_wait_state
+LEDR 14 - wr_fifo_state
+LEDR 13 - wr_wait_state
+LEDR 12 - rd_fifo_state
