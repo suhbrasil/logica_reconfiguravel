@@ -1,0 +1,1829 @@
+TimeQuest Timing Analyzer report for nios
+Wed Dec 11 11:11:52 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Minimum Pulse Width: 'clock'
+ 12. Setup Times
+ 13. Hold Times
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Propagation Delay
+ 17. Minimum Propagation Delay
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Minimum Pulse Width: 'clock'
+ 24. Setup Times
+ 25. Hold Times
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Propagation Delay
+ 29. Minimum Propagation Delay
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Progagation Delay
+ 36. Minimum Progagation Delay
+ 37. Clock Transfers
+ 38. Report TCCS
+ 39. Report RSKM
+ 40. Unconstrained Paths
+ 41. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; nios                                                              ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -97.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[25] ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; add[*]         ; clock      ; 6.874 ; 6.874 ; Rise       ; clock           ;
+;  add[0]        ; clock      ; 6.874 ; 6.874 ; Rise       ; clock           ;
+;  add[1]        ; clock      ; 6.799 ; 6.799 ; Rise       ; clock           ;
+; chipselect     ; clock      ; 6.425 ; 6.425 ; Rise       ; clock           ;
+; write_en       ; clock      ; 6.354 ; 6.354 ; Rise       ; clock           ;
+; writedata[*]   ; clock      ; 5.175 ; 5.175 ; Rise       ; clock           ;
+;  writedata[0]  ; clock      ; 4.521 ; 4.521 ; Rise       ; clock           ;
+;  writedata[1]  ; clock      ; 3.847 ; 3.847 ; Rise       ; clock           ;
+;  writedata[2]  ; clock      ; 3.907 ; 3.907 ; Rise       ; clock           ;
+;  writedata[3]  ; clock      ; 3.603 ; 3.603 ; Rise       ; clock           ;
+;  writedata[4]  ; clock      ; 4.451 ; 4.451 ; Rise       ; clock           ;
+;  writedata[5]  ; clock      ; 3.629 ; 3.629 ; Rise       ; clock           ;
+;  writedata[6]  ; clock      ; 4.408 ; 4.408 ; Rise       ; clock           ;
+;  writedata[7]  ; clock      ; 4.058 ; 4.058 ; Rise       ; clock           ;
+;  writedata[8]  ; clock      ; 4.224 ; 4.224 ; Rise       ; clock           ;
+;  writedata[9]  ; clock      ; 3.731 ; 3.731 ; Rise       ; clock           ;
+;  writedata[10] ; clock      ; 3.908 ; 3.908 ; Rise       ; clock           ;
+;  writedata[11] ; clock      ; 4.295 ; 4.295 ; Rise       ; clock           ;
+;  writedata[12] ; clock      ; 4.272 ; 4.272 ; Rise       ; clock           ;
+;  writedata[13] ; clock      ; 3.832 ; 3.832 ; Rise       ; clock           ;
+;  writedata[14] ; clock      ; 3.688 ; 3.688 ; Rise       ; clock           ;
+;  writedata[15] ; clock      ; 4.106 ; 4.106 ; Rise       ; clock           ;
+;  writedata[16] ; clock      ; 4.179 ; 4.179 ; Rise       ; clock           ;
+;  writedata[17] ; clock      ; 4.019 ; 4.019 ; Rise       ; clock           ;
+;  writedata[18] ; clock      ; 3.670 ; 3.670 ; Rise       ; clock           ;
+;  writedata[19] ; clock      ; 3.949 ; 3.949 ; Rise       ; clock           ;
+;  writedata[20] ; clock      ; 3.709 ; 3.709 ; Rise       ; clock           ;
+;  writedata[21] ; clock      ; 3.973 ; 3.973 ; Rise       ; clock           ;
+;  writedata[22] ; clock      ; 4.065 ; 4.065 ; Rise       ; clock           ;
+;  writedata[23] ; clock      ; 3.980 ; 3.980 ; Rise       ; clock           ;
+;  writedata[24] ; clock      ; 5.175 ; 5.175 ; Rise       ; clock           ;
+;  writedata[25] ; clock      ; 4.220 ; 4.220 ; Rise       ; clock           ;
+;  writedata[26] ; clock      ; 3.553 ; 3.553 ; Rise       ; clock           ;
+;  writedata[27] ; clock      ; 3.613 ; 3.613 ; Rise       ; clock           ;
+;  writedata[28] ; clock      ; 3.626 ; 3.626 ; Rise       ; clock           ;
+;  writedata[29] ; clock      ; 3.990 ; 3.990 ; Rise       ; clock           ;
+;  writedata[30] ; clock      ; 3.903 ; 3.903 ; Rise       ; clock           ;
+;  writedata[31] ; clock      ; 3.875 ; 3.875 ; Rise       ; clock           ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; add[*]         ; clock      ; -4.794 ; -4.794 ; Rise       ; clock           ;
+;  add[0]        ; clock      ; -4.869 ; -4.869 ; Rise       ; clock           ;
+;  add[1]        ; clock      ; -4.794 ; -4.794 ; Rise       ; clock           ;
+; chipselect     ; clock      ; -4.420 ; -4.420 ; Rise       ; clock           ;
+; write_en       ; clock      ; -4.349 ; -4.349 ; Rise       ; clock           ;
+; writedata[*]   ; clock      ; -3.204 ; -3.204 ; Rise       ; clock           ;
+;  writedata[0]  ; clock      ; -3.705 ; -3.705 ; Rise       ; clock           ;
+;  writedata[1]  ; clock      ; -3.316 ; -3.316 ; Rise       ; clock           ;
+;  writedata[2]  ; clock      ; -3.304 ; -3.304 ; Rise       ; clock           ;
+;  writedata[3]  ; clock      ; -3.204 ; -3.204 ; Rise       ; clock           ;
+;  writedata[4]  ; clock      ; -3.735 ; -3.735 ; Rise       ; clock           ;
+;  writedata[5]  ; clock      ; -3.238 ; -3.238 ; Rise       ; clock           ;
+;  writedata[6]  ; clock      ; -3.536 ; -3.536 ; Rise       ; clock           ;
+;  writedata[7]  ; clock      ; -3.681 ; -3.681 ; Rise       ; clock           ;
+;  writedata[8]  ; clock      ; -3.541 ; -3.541 ; Rise       ; clock           ;
+;  writedata[9]  ; clock      ; -3.462 ; -3.462 ; Rise       ; clock           ;
+;  writedata[10] ; clock      ; -3.520 ; -3.520 ; Rise       ; clock           ;
+;  writedata[11] ; clock      ; -4.003 ; -4.003 ; Rise       ; clock           ;
+;  writedata[12] ; clock      ; -3.504 ; -3.504 ; Rise       ; clock           ;
+;  writedata[13] ; clock      ; -3.574 ; -3.574 ; Rise       ; clock           ;
+;  writedata[14] ; clock      ; -3.446 ; -3.446 ; Rise       ; clock           ;
+;  writedata[15] ; clock      ; -3.646 ; -3.646 ; Rise       ; clock           ;
+;  writedata[16] ; clock      ; -3.621 ; -3.621 ; Rise       ; clock           ;
+;  writedata[17] ; clock      ; -3.565 ; -3.565 ; Rise       ; clock           ;
+;  writedata[18] ; clock      ; -3.437 ; -3.437 ; Rise       ; clock           ;
+;  writedata[19] ; clock      ; -3.344 ; -3.344 ; Rise       ; clock           ;
+;  writedata[20] ; clock      ; -3.476 ; -3.476 ; Rise       ; clock           ;
+;  writedata[21] ; clock      ; -3.514 ; -3.514 ; Rise       ; clock           ;
+;  writedata[22] ; clock      ; -3.555 ; -3.555 ; Rise       ; clock           ;
+;  writedata[23] ; clock      ; -3.742 ; -3.742 ; Rise       ; clock           ;
+;  writedata[24] ; clock      ; -3.866 ; -3.866 ; Rise       ; clock           ;
+;  writedata[25] ; clock      ; -3.754 ; -3.754 ; Rise       ; clock           ;
+;  writedata[26] ; clock      ; -3.318 ; -3.318 ; Rise       ; clock           ;
+;  writedata[27] ; clock      ; -3.373 ; -3.373 ; Rise       ; clock           ;
+;  writedata[28] ; clock      ; -3.376 ; -3.376 ; Rise       ; clock           ;
+;  writedata[29] ; clock      ; -3.753 ; -3.753 ; Rise       ; clock           ;
+;  writedata[30] ; clock      ; -3.396 ; -3.396 ; Rise       ; clock           ;
+;  writedata[31] ; clock      ; -3.422 ; -3.422 ; Rise       ; clock           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; readdata[*]   ; clock      ; 11.031 ; 11.031 ; Rise       ; clock           ;
+;  readdata[0]  ; clock      ; 8.855  ; 8.855  ; Rise       ; clock           ;
+;  readdata[1]  ; clock      ; 9.139  ; 9.139  ; Rise       ; clock           ;
+;  readdata[2]  ; clock      ; 8.062  ; 8.062  ; Rise       ; clock           ;
+;  readdata[3]  ; clock      ; 9.270  ; 9.270  ; Rise       ; clock           ;
+;  readdata[4]  ; clock      ; 10.117 ; 10.117 ; Rise       ; clock           ;
+;  readdata[5]  ; clock      ; 8.373  ; 8.373  ; Rise       ; clock           ;
+;  readdata[6]  ; clock      ; 8.446  ; 8.446  ; Rise       ; clock           ;
+;  readdata[7]  ; clock      ; 8.427  ; 8.427  ; Rise       ; clock           ;
+;  readdata[8]  ; clock      ; 10.384 ; 10.384 ; Rise       ; clock           ;
+;  readdata[9]  ; clock      ; 8.033  ; 8.033  ; Rise       ; clock           ;
+;  readdata[10] ; clock      ; 8.297  ; 8.297  ; Rise       ; clock           ;
+;  readdata[11] ; clock      ; 8.536  ; 8.536  ; Rise       ; clock           ;
+;  readdata[12] ; clock      ; 10.107 ; 10.107 ; Rise       ; clock           ;
+;  readdata[13] ; clock      ; 11.031 ; 11.031 ; Rise       ; clock           ;
+;  readdata[14] ; clock      ; 8.818  ; 8.818  ; Rise       ; clock           ;
+;  readdata[15] ; clock      ; 8.778  ; 8.778  ; Rise       ; clock           ;
+;  readdata[16] ; clock      ; 9.882  ; 9.882  ; Rise       ; clock           ;
+;  readdata[17] ; clock      ; 8.899  ; 8.899  ; Rise       ; clock           ;
+;  readdata[18] ; clock      ; 8.457  ; 8.457  ; Rise       ; clock           ;
+;  readdata[19] ; clock      ; 8.496  ; 8.496  ; Rise       ; clock           ;
+;  readdata[20] ; clock      ; 8.794  ; 8.794  ; Rise       ; clock           ;
+;  readdata[21] ; clock      ; 8.254  ; 8.254  ; Rise       ; clock           ;
+;  readdata[22] ; clock      ; 8.176  ; 8.176  ; Rise       ; clock           ;
+;  readdata[23] ; clock      ; 8.753  ; 8.753  ; Rise       ; clock           ;
+;  readdata[24] ; clock      ; 10.817 ; 10.817 ; Rise       ; clock           ;
+;  readdata[25] ; clock      ; 9.383  ; 9.383  ; Rise       ; clock           ;
+;  readdata[26] ; clock      ; 8.490  ; 8.490  ; Rise       ; clock           ;
+;  readdata[27] ; clock      ; 8.669  ; 8.669  ; Rise       ; clock           ;
+;  readdata[28] ; clock      ; 9.608  ; 9.608  ; Rise       ; clock           ;
+;  readdata[29] ; clock      ; 9.605  ; 9.605  ; Rise       ; clock           ;
+;  readdata[30] ; clock      ; 8.737  ; 8.737  ; Rise       ; clock           ;
+;  readdata[31] ; clock      ; 8.973  ; 8.973  ; Rise       ; clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; readdata[*]   ; clock      ; 6.996 ; 6.996 ; Rise       ; clock           ;
+;  readdata[0]  ; clock      ; 7.900 ; 7.900 ; Rise       ; clock           ;
+;  readdata[1]  ; clock      ; 7.749 ; 7.749 ; Rise       ; clock           ;
+;  readdata[2]  ; clock      ; 7.072 ; 7.072 ; Rise       ; clock           ;
+;  readdata[3]  ; clock      ; 7.067 ; 7.067 ; Rise       ; clock           ;
+;  readdata[4]  ; clock      ; 7.247 ; 7.247 ; Rise       ; clock           ;
+;  readdata[5]  ; clock      ; 7.085 ; 7.085 ; Rise       ; clock           ;
+;  readdata[6]  ; clock      ; 7.087 ; 7.087 ; Rise       ; clock           ;
+;  readdata[7]  ; clock      ; 7.422 ; 7.422 ; Rise       ; clock           ;
+;  readdata[8]  ; clock      ; 7.532 ; 7.532 ; Rise       ; clock           ;
+;  readdata[9]  ; clock      ; 7.048 ; 7.048 ; Rise       ; clock           ;
+;  readdata[10] ; clock      ; 6.996 ; 6.996 ; Rise       ; clock           ;
+;  readdata[11] ; clock      ; 7.033 ; 7.033 ; Rise       ; clock           ;
+;  readdata[12] ; clock      ; 7.723 ; 7.723 ; Rise       ; clock           ;
+;  readdata[13] ; clock      ; 7.401 ; 7.401 ; Rise       ; clock           ;
+;  readdata[14] ; clock      ; 7.336 ; 7.336 ; Rise       ; clock           ;
+;  readdata[15] ; clock      ; 7.033 ; 7.033 ; Rise       ; clock           ;
+;  readdata[16] ; clock      ; 7.531 ; 7.531 ; Rise       ; clock           ;
+;  readdata[17] ; clock      ; 7.464 ; 7.464 ; Rise       ; clock           ;
+;  readdata[18] ; clock      ; 7.472 ; 7.472 ; Rise       ; clock           ;
+;  readdata[19] ; clock      ; 7.477 ; 7.477 ; Rise       ; clock           ;
+;  readdata[20] ; clock      ; 7.427 ; 7.427 ; Rise       ; clock           ;
+;  readdata[21] ; clock      ; 7.260 ; 7.260 ; Rise       ; clock           ;
+;  readdata[22] ; clock      ; 7.202 ; 7.202 ; Rise       ; clock           ;
+;  readdata[23] ; clock      ; 7.489 ; 7.489 ; Rise       ; clock           ;
+;  readdata[24] ; clock      ; 7.206 ; 7.206 ; Rise       ; clock           ;
+;  readdata[25] ; clock      ; 7.659 ; 7.659 ; Rise       ; clock           ;
+;  readdata[26] ; clock      ; 7.273 ; 7.273 ; Rise       ; clock           ;
+;  readdata[27] ; clock      ; 7.261 ; 7.261 ; Rise       ; clock           ;
+;  readdata[28] ; clock      ; 7.632 ; 7.632 ; Rise       ; clock           ;
+;  readdata[29] ; clock      ; 7.379 ; 7.379 ; Rise       ; clock           ;
+;  readdata[30] ; clock      ; 7.260 ; 7.260 ; Rise       ; clock           ;
+;  readdata[31] ; clock      ; 7.279 ; 7.279 ; Rise       ; clock           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------+
+; Propagation Delay                                             ;
++------------+--------------+--------+--------+--------+--------+
+; Input Port ; Output Port  ; RR     ; RF     ; FR     ; FF     ;
++------------+--------------+--------+--------+--------+--------+
+; add[0]     ; readdata[0]  ; 11.979 ; 11.979 ; 11.979 ; 11.979 ;
+; add[0]     ; readdata[1]  ; 12.958 ; 12.958 ; 12.958 ; 12.958 ;
+; add[0]     ; readdata[2]  ; 11.192 ; 11.192 ; 11.192 ; 11.192 ;
+; add[0]     ; readdata[3]  ; 11.757 ; 11.757 ; 11.757 ; 11.757 ;
+; add[0]     ; readdata[4]  ; 12.606 ; 12.606 ; 12.606 ; 12.606 ;
+; add[0]     ; readdata[5]  ; 11.519 ; 11.519 ; 11.519 ; 11.519 ;
+; add[0]     ; readdata[6]  ; 11.522 ; 11.522 ; 11.522 ; 11.522 ;
+; add[0]     ; readdata[7]  ; 11.531 ; 11.531 ; 11.531 ; 11.531 ;
+; add[0]     ; readdata[8]  ; 12.867 ; 12.867 ; 12.867 ; 12.867 ;
+; add[0]     ; readdata[9]  ; 11.165 ; 11.165 ; 11.165 ; 11.165 ;
+; add[0]     ; readdata[10] ; 11.431 ; 11.431 ; 11.431 ; 11.431 ;
+; add[0]     ; readdata[11] ; 11.968 ; 11.968 ; 11.968 ; 11.968 ;
+; add[0]     ; readdata[12] ; 13.824 ; 13.824 ; 13.824 ; 13.824 ;
+; add[0]     ; readdata[13] ; 12.743 ; 12.743 ; 12.743 ; 12.743 ;
+; add[0]     ; readdata[14] ; 12.257 ; 12.257 ; 12.257 ; 12.257 ;
+; add[0]     ; readdata[15] ; 12.209 ; 12.209 ; 12.209 ; 12.209 ;
+; add[0]     ; readdata[16] ; 13.598 ; 13.598 ; 13.598 ; 13.598 ;
+; add[0]     ; readdata[17] ; 12.688 ; 12.688 ; 12.688 ; 12.688 ;
+; add[0]     ; readdata[18] ; 11.624 ; 11.624 ; 11.624 ; 11.624 ;
+; add[0]     ; readdata[19] ; 12.733 ; 12.733 ; 12.733 ; 12.733 ;
+; add[0]     ; readdata[20] ; 12.733 ; 12.733 ; 12.733 ; 12.733 ;
+; add[0]     ; readdata[21] ; 12.421 ; 12.421 ; 12.421 ; 12.421 ;
+; add[0]     ; readdata[22] ; 12.411 ; 12.411 ; 12.411 ; 12.411 ;
+; add[0]     ; readdata[23] ; 12.688 ; 12.688 ; 12.688 ; 12.688 ;
+; add[0]     ; readdata[24] ; 12.545 ; 12.545 ; 12.545 ; 12.545 ;
+; add[0]     ; readdata[25] ; 12.990 ; 12.990 ; 12.990 ; 12.990 ;
+; add[0]     ; readdata[26] ; 11.781 ; 11.781 ; 11.781 ; 11.781 ;
+; add[0]     ; readdata[27] ; 11.734 ; 11.734 ; 11.734 ; 11.734 ;
+; add[0]     ; readdata[28] ; 12.595 ; 12.595 ; 12.595 ; 12.595 ;
+; add[0]     ; readdata[29] ; 11.610 ; 11.610 ; 11.610 ; 11.610 ;
+; add[0]     ; readdata[30] ; 11.502 ; 11.502 ; 11.502 ; 11.502 ;
+; add[0]     ; readdata[31] ; 11.476 ; 11.476 ; 11.476 ; 11.476 ;
+; add[1]     ; readdata[0]  ; 12.586 ; 12.586 ; 12.586 ; 12.586 ;
+; add[1]     ; readdata[1]  ; 12.626 ; 12.626 ; 12.626 ; 12.626 ;
+; add[1]     ; readdata[2]  ; 11.560 ; 11.560 ; 11.560 ; 11.560 ;
+; add[1]     ; readdata[3]  ; 11.308 ; 11.308 ; 11.308 ; 11.308 ;
+; add[1]     ; readdata[4]  ; 12.644 ; 12.644 ; 12.644 ; 12.644 ;
+; add[1]     ; readdata[5]  ; 11.328 ; 11.328 ; 11.328 ; 11.328 ;
+; add[1]     ; readdata[6]  ; 11.331 ; 11.331 ; 11.331 ; 11.331 ;
+; add[1]     ; readdata[7]  ; 11.909 ; 11.909 ; 11.909 ; 11.909 ;
+; add[1]     ; readdata[8]  ; 12.930 ; 12.930 ; 12.930 ; 12.930 ;
+; add[1]     ; readdata[9]  ; 11.527 ; 11.527 ; 11.527 ; 11.527 ;
+; add[1]     ; readdata[10] ; 11.234 ; 11.234 ; 11.234 ; 11.234 ;
+; add[1]     ; readdata[11] ; 11.275 ; 12.386 ; 12.386 ; 11.275 ;
+; add[1]     ; readdata[12] ; 13.128 ; 14.484 ; 14.484 ; 13.128 ;
+; add[1]     ; readdata[13] ; 12.808 ; 13.951 ; 13.951 ; 12.808 ;
+; add[1]     ; readdata[14] ; 11.579 ; 12.671 ; 12.671 ; 11.579 ;
+; add[1]     ; readdata[15] ; 11.265 ; 12.626 ; 12.626 ; 11.265 ;
+; add[1]     ; readdata[16] ; 12.936 ; 14.258 ; 14.258 ; 12.936 ;
+; add[1]     ; readdata[17] ; 12.862 ; 13.661 ; 13.661 ; 12.862 ;
+; add[1]     ; readdata[18] ; 12.870 ; 13.981 ; 13.981 ; 12.870 ;
+; add[1]     ; readdata[19] ; 12.874 ; 14.019 ; 14.019 ; 12.874 ;
+; add[1]     ; readdata[20] ; 12.835 ; 13.732 ; 13.732 ; 12.835 ;
+; add[1]     ; readdata[21] ; 12.662 ; 13.782 ; 13.782 ; 12.662 ;
+; add[1]     ; readdata[22] ; 12.610 ; 13.710 ; 13.710 ; 12.610 ;
+; add[1]     ; readdata[23] ; 12.897 ; 13.692 ; 13.692 ; 12.897 ;
+; add[1]     ; readdata[24] ; 12.613 ; 13.753 ; 13.753 ; 12.613 ;
+; add[1]     ; readdata[25] ; 12.658 ; 13.113 ; 13.113 ; 12.658 ;
+; add[1]     ; readdata[26] ; 11.500 ; 12.726 ; 12.726 ; 11.500 ;
+; add[1]     ; readdata[27] ; 11.488 ; 12.669 ; 12.669 ; 11.488 ;
+; add[1]     ; readdata[28] ; 11.861 ; 13.009 ; 13.009 ; 11.861 ;
+; add[1]     ; readdata[29] ; 11.604 ; 12.823 ; 12.823 ; 11.604 ;
+; add[1]     ; readdata[30] ; 11.486 ; 12.712 ; 12.712 ; 11.486 ;
+; add[1]     ; readdata[31] ; 11.510 ; 12.686 ; 12.686 ; 11.510 ;
+; chipselect ; readdata[0]  ; 12.742 ; 12.742 ; 12.742 ; 12.742 ;
+; chipselect ; readdata[1]  ; 12.783 ; 12.783 ; 12.783 ; 12.783 ;
+; chipselect ; readdata[2]  ; 11.716 ; 11.716 ; 11.716 ; 11.716 ;
+; chipselect ; readdata[3]  ; 11.464 ; 11.464 ; 11.464 ; 11.464 ;
+; chipselect ; readdata[4]  ; 12.800 ; 12.800 ; 12.800 ; 12.800 ;
+; chipselect ; readdata[5]  ; 11.484 ; 11.484 ; 11.484 ; 11.484 ;
+; chipselect ; readdata[6]  ; 11.487 ; 11.487 ; 11.487 ; 11.487 ;
+; chipselect ; readdata[7]  ; 12.065 ; 12.065 ; 12.065 ; 12.065 ;
+; chipselect ; readdata[8]  ; 13.086 ; 13.086 ; 13.086 ; 13.086 ;
+; chipselect ; readdata[9]  ; 11.683 ; 11.683 ; 11.683 ; 11.683 ;
+; chipselect ; readdata[10] ; 11.390 ; 11.390 ; 11.390 ; 11.390 ;
+; chipselect ; readdata[11] ; 12.542 ; 11.431 ; 11.431 ; 12.542 ;
+; chipselect ; readdata[12] ; 14.640 ; 13.284 ; 13.284 ; 14.640 ;
+; chipselect ; readdata[13] ; 14.107 ; 12.964 ; 12.964 ; 14.107 ;
+; chipselect ; readdata[14] ; 12.827 ; 11.735 ; 11.735 ; 12.827 ;
+; chipselect ; readdata[15] ; 12.782 ; 11.421 ; 11.421 ; 12.782 ;
+; chipselect ; readdata[16] ; 14.414 ; 13.092 ; 13.092 ; 14.414 ;
+; chipselect ; readdata[17] ; 13.817 ; 13.018 ; 13.018 ; 13.817 ;
+; chipselect ; readdata[18] ; 14.137 ; 13.026 ; 13.026 ; 14.137 ;
+; chipselect ; readdata[19] ; 14.175 ; 13.030 ; 13.030 ; 14.175 ;
+; chipselect ; readdata[20] ; 13.888 ; 12.991 ; 12.991 ; 13.888 ;
+; chipselect ; readdata[21] ; 13.938 ; 12.818 ; 12.818 ; 13.938 ;
+; chipselect ; readdata[22] ; 13.866 ; 12.766 ; 12.766 ; 13.866 ;
+; chipselect ; readdata[23] ; 13.848 ; 13.053 ; 13.053 ; 13.848 ;
+; chipselect ; readdata[24] ; 13.909 ; 12.769 ; 12.769 ; 13.909 ;
+; chipselect ; readdata[25] ; 13.269 ; 12.815 ; 12.815 ; 13.269 ;
+; chipselect ; readdata[26] ; 12.882 ; 11.656 ; 11.656 ; 12.882 ;
+; chipselect ; readdata[27] ; 12.825 ; 11.644 ; 11.644 ; 12.825 ;
+; chipselect ; readdata[28] ; 13.165 ; 12.017 ; 12.017 ; 13.165 ;
+; chipselect ; readdata[29] ; 12.979 ; 11.760 ; 11.760 ; 12.979 ;
+; chipselect ; readdata[30] ; 12.868 ; 11.642 ; 11.642 ; 12.868 ;
+; chipselect ; readdata[31] ; 12.842 ; 11.666 ; 11.666 ; 12.842 ;
+; read_en    ; readdata[0]  ; 12.833 ; 12.833 ; 12.833 ; 12.833 ;
+; read_en    ; readdata[1]  ; 12.873 ; 12.873 ; 12.873 ; 12.873 ;
+; read_en    ; readdata[2]  ; 11.807 ; 11.807 ; 11.807 ; 11.807 ;
+; read_en    ; readdata[3]  ; 11.555 ; 11.555 ; 11.555 ; 11.555 ;
+; read_en    ; readdata[4]  ; 12.891 ; 12.891 ; 12.891 ; 12.891 ;
+; read_en    ; readdata[5]  ; 11.575 ; 11.575 ; 11.575 ; 11.575 ;
+; read_en    ; readdata[6]  ; 11.578 ; 11.578 ; 11.578 ; 11.578 ;
+; read_en    ; readdata[7]  ; 12.156 ; 12.156 ; 12.156 ; 12.156 ;
+; read_en    ; readdata[8]  ; 13.177 ; 13.177 ; 13.177 ; 13.177 ;
+; read_en    ; readdata[9]  ; 11.774 ; 11.774 ; 11.774 ; 11.774 ;
+; read_en    ; readdata[10] ; 11.481 ; 11.481 ; 11.481 ; 11.481 ;
+; read_en    ; readdata[11] ; 12.633 ; 11.522 ; 11.522 ; 12.633 ;
+; read_en    ; readdata[12] ; 14.731 ; 13.375 ; 13.375 ; 14.731 ;
+; read_en    ; readdata[13] ; 14.198 ; 13.055 ; 13.055 ; 14.198 ;
+; read_en    ; readdata[14] ; 12.918 ; 11.826 ; 11.826 ; 12.918 ;
+; read_en    ; readdata[15] ; 12.873 ; 11.512 ; 11.512 ; 12.873 ;
+; read_en    ; readdata[16] ; 14.505 ; 13.183 ; 13.183 ; 14.505 ;
+; read_en    ; readdata[17] ; 13.908 ; 13.109 ; 13.109 ; 13.908 ;
+; read_en    ; readdata[18] ; 14.228 ; 13.117 ; 13.117 ; 14.228 ;
+; read_en    ; readdata[19] ; 14.266 ; 13.121 ; 13.121 ; 14.266 ;
+; read_en    ; readdata[20] ; 13.979 ; 13.082 ; 13.082 ; 13.979 ;
+; read_en    ; readdata[21] ; 14.029 ; 12.909 ; 12.909 ; 14.029 ;
+; read_en    ; readdata[22] ; 13.957 ; 12.857 ; 12.857 ; 13.957 ;
+; read_en    ; readdata[23] ; 13.939 ; 13.144 ; 13.144 ; 13.939 ;
+; read_en    ; readdata[24] ; 14.000 ; 12.860 ; 12.860 ; 14.000 ;
+; read_en    ; readdata[25] ; 13.360 ; 12.905 ; 12.905 ; 13.360 ;
+; read_en    ; readdata[26] ; 12.973 ; 11.747 ; 11.747 ; 12.973 ;
+; read_en    ; readdata[27] ; 12.916 ; 11.735 ; 11.735 ; 12.916 ;
+; read_en    ; readdata[28] ; 13.256 ; 12.108 ; 12.108 ; 13.256 ;
+; read_en    ; readdata[29] ; 13.070 ; 11.851 ; 11.851 ; 13.070 ;
+; read_en    ; readdata[30] ; 12.959 ; 11.733 ; 11.733 ; 12.959 ;
+; read_en    ; readdata[31] ; 12.933 ; 11.757 ; 11.757 ; 12.933 ;
++------------+--------------+--------+--------+--------+--------+
+
+
++---------------------------------------------------------------+
+; Minimum Propagation Delay                                     ;
++------------+--------------+--------+--------+--------+--------+
+; Input Port ; Output Port  ; RR     ; RF     ; FR     ; FF     ;
++------------+--------------+--------+--------+--------+--------+
+; add[0]     ; readdata[0]  ; 11.179 ; 11.179 ; 11.179 ; 11.179 ;
+; add[0]     ; readdata[1]  ; 11.645 ; 11.645 ; 11.645 ; 11.645 ;
+; add[0]     ; readdata[2]  ; 10.895 ; 10.895 ; 10.895 ; 10.895 ;
+; add[0]     ; readdata[3]  ; 10.924 ; 10.924 ; 10.924 ; 10.924 ;
+; add[0]     ; readdata[4]  ; 12.451 ; 12.451 ; 12.451 ; 12.451 ;
+; add[0]     ; readdata[5]  ; 10.953 ; 10.953 ; 10.953 ; 10.953 ;
+; add[0]     ; readdata[6]  ; 10.954 ; 10.954 ; 10.954 ; 10.954 ;
+; add[0]     ; readdata[7]  ; 11.247 ; 11.247 ; 11.247 ; 11.247 ;
+; add[0]     ; readdata[8]  ; 12.723 ; 12.723 ; 12.723 ; 12.723 ;
+; add[0]     ; readdata[9]  ; 10.944 ; 10.944 ; 10.944 ; 10.944 ;
+; add[0]     ; readdata[10] ; 10.901 ; 10.901 ; 10.901 ; 10.901 ;
+; add[0]     ; readdata[11] ; 10.943 ; 10.943 ; 10.943 ; 10.943 ;
+; add[0]     ; readdata[12] ; 12.689 ; 12.689 ; 12.689 ; 12.689 ;
+; add[0]     ; readdata[13] ; 11.257 ; 11.257 ; 11.257 ; 11.257 ;
+; add[0]     ; readdata[14] ; 11.205 ; 11.205 ; 11.205 ; 11.205 ;
+; add[0]     ; readdata[15] ; 10.953 ; 10.953 ; 10.953 ; 10.953 ;
+; add[0]     ; readdata[16] ; 12.733 ; 12.733 ; 12.733 ; 12.733 ;
+; add[0]     ; readdata[17] ; 11.582 ; 11.582 ; 11.582 ; 11.582 ;
+; add[0]     ; readdata[18] ; 11.277 ; 11.277 ; 11.277 ; 11.277 ;
+; add[0]     ; readdata[19] ; 11.660 ; 11.660 ; 11.660 ; 11.660 ;
+; add[0]     ; readdata[20] ; 11.651 ; 11.651 ; 11.651 ; 11.651 ;
+; add[0]     ; readdata[21] ; 11.419 ; 11.419 ; 11.419 ; 11.419 ;
+; add[0]     ; readdata[22] ; 11.353 ; 11.353 ; 11.353 ; 11.353 ;
+; add[0]     ; readdata[23] ; 11.614 ; 11.614 ; 11.614 ; 11.614 ;
+; add[0]     ; readdata[24] ; 11.979 ; 11.979 ; 11.979 ; 11.979 ;
+; add[0]     ; readdata[25] ; 11.904 ; 11.904 ; 11.904 ; 11.904 ;
+; add[0]     ; readdata[26] ; 10.924 ; 10.924 ; 10.924 ; 10.924 ;
+; add[0]     ; readdata[27] ; 10.905 ; 10.905 ; 10.905 ; 10.905 ;
+; add[0]     ; readdata[28] ; 11.247 ; 11.247 ; 11.247 ; 11.247 ;
+; add[0]     ; readdata[29] ; 10.944 ; 10.944 ; 10.944 ; 10.944 ;
+; add[0]     ; readdata[30] ; 10.943 ; 10.943 ; 10.943 ; 10.943 ;
+; add[0]     ; readdata[31] ; 10.954 ; 10.954 ; 10.954 ; 10.954 ;
+; add[1]     ; readdata[0]  ; 11.647 ; 11.647 ; 11.647 ; 11.647 ;
+; add[1]     ; readdata[1]  ; 12.009 ; 12.009 ; 12.009 ; 12.009 ;
+; add[1]     ; readdata[2]  ; 10.563 ; 10.563 ; 10.563 ; 10.563 ;
+; add[1]     ; readdata[3]  ; 10.592 ; 10.592 ; 10.592 ; 10.592 ;
+; add[1]     ; readdata[4]  ; 12.119 ; 12.119 ; 12.119 ; 12.119 ;
+; add[1]     ; readdata[5]  ; 10.621 ; 10.621 ; 10.621 ; 10.621 ;
+; add[1]     ; readdata[6]  ; 10.622 ; 10.622 ; 10.622 ; 10.622 ;
+; add[1]     ; readdata[7]  ; 10.915 ; 10.915 ; 10.915 ; 10.915 ;
+; add[1]     ; readdata[8]  ; 12.391 ; 12.391 ; 12.391 ; 12.391 ;
+; add[1]     ; readdata[9]  ; 10.612 ; 10.612 ; 10.612 ; 10.612 ;
+; add[1]     ; readdata[10] ; 10.569 ; 10.569 ; 10.569 ; 10.569 ;
+; add[1]     ; readdata[11] ; 10.611 ; 10.611 ; 10.611 ; 10.611 ;
+; add[1]     ; readdata[12] ; 12.357 ; 12.357 ; 12.357 ; 12.357 ;
+; add[1]     ; readdata[13] ; 10.925 ; 10.925 ; 10.925 ; 10.925 ;
+; add[1]     ; readdata[14] ; 10.873 ; 10.873 ; 10.873 ; 10.873 ;
+; add[1]     ; readdata[15] ; 10.621 ; 10.621 ; 10.621 ; 10.621 ;
+; add[1]     ; readdata[16] ; 12.401 ; 12.401 ; 12.401 ; 12.401 ;
+; add[1]     ; readdata[17] ; 12.356 ; 12.356 ; 12.356 ; 12.356 ;
+; add[1]     ; readdata[18] ; 10.945 ; 10.945 ; 10.945 ; 10.945 ;
+; add[1]     ; readdata[19] ; 12.401 ; 12.401 ; 12.401 ; 12.401 ;
+; add[1]     ; readdata[20] ; 12.401 ; 12.401 ; 12.401 ; 12.401 ;
+; add[1]     ; readdata[21] ; 12.089 ; 12.089 ; 12.089 ; 12.089 ;
+; add[1]     ; readdata[22] ; 12.079 ; 12.079 ; 12.079 ; 12.079 ;
+; add[1]     ; readdata[23] ; 12.356 ; 12.356 ; 12.356 ; 12.356 ;
+; add[1]     ; readdata[24] ; 11.647 ; 11.647 ; 11.647 ; 11.647 ;
+; add[1]     ; readdata[25] ; 11.888 ; 12.658 ; 12.658 ; 11.888 ;
+; add[1]     ; readdata[26] ; 10.592 ; 10.592 ; 10.592 ; 10.592 ;
+; add[1]     ; readdata[27] ; 10.573 ; 10.573 ; 10.573 ; 10.573 ;
+; add[1]     ; readdata[28] ; 10.915 ; 10.915 ; 10.915 ; 10.915 ;
+; add[1]     ; readdata[29] ; 10.612 ; 10.612 ; 10.612 ; 10.612 ;
+; add[1]     ; readdata[30] ; 10.611 ; 10.611 ; 10.611 ; 10.611 ;
+; add[1]     ; readdata[31] ; 10.622 ; 10.622 ; 10.622 ; 10.622 ;
+; chipselect ; readdata[0]  ; 11.804 ; 11.804 ; 11.804 ; 11.804 ;
+; chipselect ; readdata[1]  ; 12.165 ; 12.165 ; 12.165 ; 12.165 ;
+; chipselect ; readdata[2]  ; 10.720 ; 10.720 ; 10.720 ; 10.720 ;
+; chipselect ; readdata[3]  ; 10.749 ; 10.749 ; 10.749 ; 10.749 ;
+; chipselect ; readdata[4]  ; 12.276 ; 12.276 ; 12.276 ; 12.276 ;
+; chipselect ; readdata[5]  ; 10.778 ; 10.778 ; 10.778 ; 10.778 ;
+; chipselect ; readdata[6]  ; 10.779 ; 10.779 ; 10.779 ; 10.779 ;
+; chipselect ; readdata[7]  ; 11.072 ; 11.072 ; 11.072 ; 11.072 ;
+; chipselect ; readdata[8]  ; 12.548 ; 12.548 ; 12.548 ; 12.548 ;
+; chipselect ; readdata[9]  ; 10.769 ; 10.769 ; 10.769 ; 10.769 ;
+; chipselect ; readdata[10] ; 10.726 ; 10.726 ; 10.726 ; 10.726 ;
+; chipselect ; readdata[11] ; 10.768 ; 10.768 ; 10.768 ; 10.768 ;
+; chipselect ; readdata[12] ; 12.514 ; 12.514 ; 12.514 ; 12.514 ;
+; chipselect ; readdata[13] ; 11.082 ; 11.082 ; 11.082 ; 11.082 ;
+; chipselect ; readdata[14] ; 11.030 ; 11.030 ; 11.030 ; 11.030 ;
+; chipselect ; readdata[15] ; 10.778 ; 10.778 ; 10.778 ; 10.778 ;
+; chipselect ; readdata[16] ; 12.558 ; 12.558 ; 12.558 ; 12.558 ;
+; chipselect ; readdata[17] ; 12.513 ; 12.513 ; 12.513 ; 12.513 ;
+; chipselect ; readdata[18] ; 11.102 ; 11.102 ; 11.102 ; 11.102 ;
+; chipselect ; readdata[19] ; 12.558 ; 12.558 ; 12.558 ; 12.558 ;
+; chipselect ; readdata[20] ; 12.558 ; 12.558 ; 12.558 ; 12.558 ;
+; chipselect ; readdata[21] ; 12.246 ; 12.246 ; 12.246 ; 12.246 ;
+; chipselect ; readdata[22] ; 12.236 ; 12.236 ; 12.236 ; 12.236 ;
+; chipselect ; readdata[23] ; 12.513 ; 12.513 ; 12.513 ; 12.513 ;
+; chipselect ; readdata[24] ; 11.804 ; 11.804 ; 11.804 ; 11.804 ;
+; chipselect ; readdata[25] ; 12.815 ; 12.044 ; 12.044 ; 12.815 ;
+; chipselect ; readdata[26] ; 10.749 ; 10.749 ; 10.749 ; 10.749 ;
+; chipselect ; readdata[27] ; 10.730 ; 10.730 ; 10.730 ; 10.730 ;
+; chipselect ; readdata[28] ; 11.072 ; 11.072 ; 11.072 ; 11.072 ;
+; chipselect ; readdata[29] ; 10.769 ; 10.769 ; 10.769 ; 10.769 ;
+; chipselect ; readdata[30] ; 10.768 ; 10.768 ; 10.768 ; 10.768 ;
+; chipselect ; readdata[31] ; 10.779 ; 10.779 ; 10.779 ; 10.779 ;
+; read_en    ; readdata[0]  ; 11.894 ; 11.894 ; 11.894 ; 11.894 ;
+; read_en    ; readdata[1]  ; 12.256 ; 12.256 ; 12.256 ; 12.256 ;
+; read_en    ; readdata[2]  ; 10.810 ; 10.810 ; 10.810 ; 10.810 ;
+; read_en    ; readdata[3]  ; 10.839 ; 10.839 ; 10.839 ; 10.839 ;
+; read_en    ; readdata[4]  ; 12.366 ; 12.366 ; 12.366 ; 12.366 ;
+; read_en    ; readdata[5]  ; 10.868 ; 10.868 ; 10.868 ; 10.868 ;
+; read_en    ; readdata[6]  ; 10.869 ; 10.869 ; 10.869 ; 10.869 ;
+; read_en    ; readdata[7]  ; 11.162 ; 11.162 ; 11.162 ; 11.162 ;
+; read_en    ; readdata[8]  ; 12.638 ; 12.638 ; 12.638 ; 12.638 ;
+; read_en    ; readdata[9]  ; 10.859 ; 10.859 ; 10.859 ; 10.859 ;
+; read_en    ; readdata[10] ; 10.816 ; 10.816 ; 10.816 ; 10.816 ;
+; read_en    ; readdata[11] ; 10.858 ; 10.858 ; 10.858 ; 10.858 ;
+; read_en    ; readdata[12] ; 12.604 ; 12.604 ; 12.604 ; 12.604 ;
+; read_en    ; readdata[13] ; 11.172 ; 11.172 ; 11.172 ; 11.172 ;
+; read_en    ; readdata[14] ; 11.120 ; 11.120 ; 11.120 ; 11.120 ;
+; read_en    ; readdata[15] ; 10.868 ; 10.868 ; 10.868 ; 10.868 ;
+; read_en    ; readdata[16] ; 12.648 ; 12.648 ; 12.648 ; 12.648 ;
+; read_en    ; readdata[17] ; 12.603 ; 12.603 ; 12.603 ; 12.603 ;
+; read_en    ; readdata[18] ; 11.192 ; 11.192 ; 11.192 ; 11.192 ;
+; read_en    ; readdata[19] ; 12.648 ; 12.648 ; 12.648 ; 12.648 ;
+; read_en    ; readdata[20] ; 12.648 ; 12.648 ; 12.648 ; 12.648 ;
+; read_en    ; readdata[21] ; 12.336 ; 12.336 ; 12.336 ; 12.336 ;
+; read_en    ; readdata[22] ; 12.326 ; 12.326 ; 12.326 ; 12.326 ;
+; read_en    ; readdata[23] ; 12.603 ; 12.603 ; 12.603 ; 12.603 ;
+; read_en    ; readdata[24] ; 11.894 ; 11.894 ; 11.894 ; 11.894 ;
+; read_en    ; readdata[25] ; 12.905 ; 12.135 ; 12.135 ; 12.905 ;
+; read_en    ; readdata[26] ; 10.839 ; 10.839 ; 10.839 ; 10.839 ;
+; read_en    ; readdata[27] ; 10.820 ; 10.820 ; 10.820 ; 10.820 ;
+; read_en    ; readdata[28] ; 11.162 ; 11.162 ; 11.162 ; 11.162 ;
+; read_en    ; readdata[29] ; 10.859 ; 10.859 ; 10.859 ; 10.859 ;
+; read_en    ; readdata[30] ; 10.858 ; 10.858 ; 10.858 ; 10.858 ;
+; read_en    ; readdata[31] ; 10.869 ; 10.869 ; 10.869 ; 10.869 ;
++------------+--------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -97.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[25] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[25] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[26] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[26] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[27] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[27] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[28] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[28] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[29] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[29] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[30] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[30] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[31] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[31] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_0|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_0|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; reg32:r32_1|Q[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; reg32:r32_1|Q[25] ;
++--------+--------------+----------------+------------------+-------+------------+-------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; add[*]         ; clock      ; 3.583 ; 3.583 ; Rise       ; clock           ;
+;  add[0]        ; clock      ; 3.583 ; 3.583 ; Rise       ; clock           ;
+;  add[1]        ; clock      ; 3.578 ; 3.578 ; Rise       ; clock           ;
+; chipselect     ; clock      ; 3.380 ; 3.380 ; Rise       ; clock           ;
+; write_en       ; clock      ; 3.346 ; 3.346 ; Rise       ; clock           ;
+; writedata[*]   ; clock      ; 2.791 ; 2.791 ; Rise       ; clock           ;
+;  writedata[0]  ; clock      ; 2.445 ; 2.445 ; Rise       ; clock           ;
+;  writedata[1]  ; clock      ; 2.083 ; 2.083 ; Rise       ; clock           ;
+;  writedata[2]  ; clock      ; 2.117 ; 2.117 ; Rise       ; clock           ;
+;  writedata[3]  ; clock      ; 1.970 ; 1.970 ; Rise       ; clock           ;
+;  writedata[4]  ; clock      ; 2.381 ; 2.381 ; Rise       ; clock           ;
+;  writedata[5]  ; clock      ; 1.986 ; 1.986 ; Rise       ; clock           ;
+;  writedata[6]  ; clock      ; 2.325 ; 2.325 ; Rise       ; clock           ;
+;  writedata[7]  ; clock      ; 2.224 ; 2.224 ; Rise       ; clock           ;
+;  writedata[8]  ; clock      ; 2.281 ; 2.281 ; Rise       ; clock           ;
+;  writedata[9]  ; clock      ; 2.049 ; 2.049 ; Rise       ; clock           ;
+;  writedata[10] ; clock      ; 2.106 ; 2.106 ; Rise       ; clock           ;
+;  writedata[11] ; clock      ; 2.326 ; 2.326 ; Rise       ; clock           ;
+;  writedata[12] ; clock      ; 2.291 ; 2.291 ; Rise       ; clock           ;
+;  writedata[13] ; clock      ; 2.118 ; 2.118 ; Rise       ; clock           ;
+;  writedata[14] ; clock      ; 2.023 ; 2.023 ; Rise       ; clock           ;
+;  writedata[15] ; clock      ; 2.199 ; 2.199 ; Rise       ; clock           ;
+;  writedata[16] ; clock      ; 2.246 ; 2.246 ; Rise       ; clock           ;
+;  writedata[17] ; clock      ; 2.190 ; 2.190 ; Rise       ; clock           ;
+;  writedata[18] ; clock      ; 2.044 ; 2.044 ; Rise       ; clock           ;
+;  writedata[19] ; clock      ; 2.137 ; 2.137 ; Rise       ; clock           ;
+;  writedata[20] ; clock      ; 2.056 ; 2.056 ; Rise       ; clock           ;
+;  writedata[21] ; clock      ; 2.150 ; 2.150 ; Rise       ; clock           ;
+;  writedata[22] ; clock      ; 2.203 ; 2.203 ; Rise       ; clock           ;
+;  writedata[23] ; clock      ; 2.143 ; 2.143 ; Rise       ; clock           ;
+;  writedata[24] ; clock      ; 2.791 ; 2.791 ; Rise       ; clock           ;
+;  writedata[25] ; clock      ; 2.272 ; 2.272 ; Rise       ; clock           ;
+;  writedata[26] ; clock      ; 1.945 ; 1.945 ; Rise       ; clock           ;
+;  writedata[27] ; clock      ; 1.977 ; 1.977 ; Rise       ; clock           ;
+;  writedata[28] ; clock      ; 1.984 ; 1.984 ; Rise       ; clock           ;
+;  writedata[29] ; clock      ; 2.177 ; 2.177 ; Rise       ; clock           ;
+;  writedata[30] ; clock      ; 2.117 ; 2.117 ; Rise       ; clock           ;
+;  writedata[31] ; clock      ; 2.096 ; 2.096 ; Rise       ; clock           ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; add[*]         ; clock      ; -2.573 ; -2.573 ; Rise       ; clock           ;
+;  add[0]        ; clock      ; -2.573 ; -2.573 ; Rise       ; clock           ;
+;  add[1]        ; clock      ; -2.586 ; -2.586 ; Rise       ; clock           ;
+; chipselect     ; clock      ; -2.371 ; -2.371 ; Rise       ; clock           ;
+; write_en       ; clock      ; -2.335 ; -2.335 ; Rise       ; clock           ;
+; writedata[*]   ; clock      ; -1.742 ; -1.742 ; Rise       ; clock           ;
+;  writedata[0]  ; clock      ; -2.021 ; -2.021 ; Rise       ; clock           ;
+;  writedata[1]  ; clock      ; -1.814 ; -1.814 ; Rise       ; clock           ;
+;  writedata[2]  ; clock      ; -1.808 ; -1.808 ; Rise       ; clock           ;
+;  writedata[3]  ; clock      ; -1.742 ; -1.742 ; Rise       ; clock           ;
+;  writedata[4]  ; clock      ; -2.049 ; -2.049 ; Rise       ; clock           ;
+;  writedata[5]  ; clock      ; -1.766 ; -1.766 ; Rise       ; clock           ;
+;  writedata[6]  ; clock      ; -1.901 ; -1.901 ; Rise       ; clock           ;
+;  writedata[7]  ; clock      ; -2.013 ; -2.013 ; Rise       ; clock           ;
+;  writedata[8]  ; clock      ; -1.972 ; -1.972 ; Rise       ; clock           ;
+;  writedata[9]  ; clock      ; -1.907 ; -1.907 ; Rise       ; clock           ;
+;  writedata[10] ; clock      ; -1.887 ; -1.887 ; Rise       ; clock           ;
+;  writedata[11] ; clock      ; -2.163 ; -2.163 ; Rise       ; clock           ;
+;  writedata[12] ; clock      ; -1.944 ; -1.944 ; Rise       ; clock           ;
+;  writedata[13] ; clock      ; -1.976 ; -1.976 ; Rise       ; clock           ;
+;  writedata[14] ; clock      ; -1.892 ; -1.892 ; Rise       ; clock           ;
+;  writedata[15] ; clock      ; -1.975 ; -1.975 ; Rise       ; clock           ;
+;  writedata[16] ; clock      ; -1.963 ; -1.963 ; Rise       ; clock           ;
+;  writedata[17] ; clock      ; -1.959 ; -1.959 ; Rise       ; clock           ;
+;  writedata[18] ; clock      ; -1.921 ; -1.921 ; Rise       ; clock           ;
+;  writedata[19] ; clock      ; -1.826 ; -1.826 ; Rise       ; clock           ;
+;  writedata[20] ; clock      ; -1.935 ; -1.935 ; Rise       ; clock           ;
+;  writedata[21] ; clock      ; -1.928 ; -1.928 ; Rise       ; clock           ;
+;  writedata[22] ; clock      ; -1.957 ; -1.957 ; Rise       ; clock           ;
+;  writedata[23] ; clock      ; -2.015 ; -2.015 ; Rise       ; clock           ;
+;  writedata[24] ; clock      ; -2.127 ; -2.127 ; Rise       ; clock           ;
+;  writedata[25] ; clock      ; -2.045 ; -2.045 ; Rise       ; clock           ;
+;  writedata[26] ; clock      ; -1.820 ; -1.820 ; Rise       ; clock           ;
+;  writedata[27] ; clock      ; -1.853 ; -1.853 ; Rise       ; clock           ;
+;  writedata[28] ; clock      ; -1.849 ; -1.849 ; Rise       ; clock           ;
+;  writedata[29] ; clock      ; -2.056 ; -2.056 ; Rise       ; clock           ;
+;  writedata[30] ; clock      ; -1.866 ; -1.866 ; Rise       ; clock           ;
+;  writedata[31] ; clock      ; -1.876 ; -1.876 ; Rise       ; clock           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; readdata[*]   ; clock      ; 5.683 ; 5.683 ; Rise       ; clock           ;
+;  readdata[0]  ; clock      ; 4.810 ; 4.810 ; Rise       ; clock           ;
+;  readdata[1]  ; clock      ; 4.883 ; 4.883 ; Rise       ; clock           ;
+;  readdata[2]  ; clock      ; 4.333 ; 4.333 ; Rise       ; clock           ;
+;  readdata[3]  ; clock      ; 4.873 ; 4.873 ; Rise       ; clock           ;
+;  readdata[4]  ; clock      ; 5.340 ; 5.340 ; Rise       ; clock           ;
+;  readdata[5]  ; clock      ; 4.477 ; 4.477 ; Rise       ; clock           ;
+;  readdata[6]  ; clock      ; 4.520 ; 4.520 ; Rise       ; clock           ;
+;  readdata[7]  ; clock      ; 4.520 ; 4.520 ; Rise       ; clock           ;
+;  readdata[8]  ; clock      ; 5.492 ; 5.492 ; Rise       ; clock           ;
+;  readdata[9]  ; clock      ; 4.318 ; 4.318 ; Rise       ; clock           ;
+;  readdata[10] ; clock      ; 4.413 ; 4.413 ; Rise       ; clock           ;
+;  readdata[11] ; clock      ; 4.554 ; 4.554 ; Rise       ; clock           ;
+;  readdata[12] ; clock      ; 5.344 ; 5.344 ; Rise       ; clock           ;
+;  readdata[13] ; clock      ; 5.683 ; 5.683 ; Rise       ; clock           ;
+;  readdata[14] ; clock      ; 4.682 ; 4.682 ; Rise       ; clock           ;
+;  readdata[15] ; clock      ; 4.664 ; 4.664 ; Rise       ; clock           ;
+;  readdata[16] ; clock      ; 5.251 ; 5.251 ; Rise       ; clock           ;
+;  readdata[17] ; clock      ; 4.773 ; 4.773 ; Rise       ; clock           ;
+;  readdata[18] ; clock      ; 4.510 ; 4.510 ; Rise       ; clock           ;
+;  readdata[19] ; clock      ; 4.578 ; 4.578 ; Rise       ; clock           ;
+;  readdata[20] ; clock      ; 4.713 ; 4.713 ; Rise       ; clock           ;
+;  readdata[21] ; clock      ; 4.460 ; 4.460 ; Rise       ; clock           ;
+;  readdata[22] ; clock      ; 4.416 ; 4.416 ; Rise       ; clock           ;
+;  readdata[23] ; clock      ; 4.705 ; 4.705 ; Rise       ; clock           ;
+;  readdata[24] ; clock      ; 5.656 ; 5.656 ; Rise       ; clock           ;
+;  readdata[25] ; clock      ; 5.011 ; 5.011 ; Rise       ; clock           ;
+;  readdata[26] ; clock      ; 4.519 ; 4.519 ; Rise       ; clock           ;
+;  readdata[27] ; clock      ; 4.609 ; 4.609 ; Rise       ; clock           ;
+;  readdata[28] ; clock      ; 5.070 ; 5.070 ; Rise       ; clock           ;
+;  readdata[29] ; clock      ; 5.026 ; 5.026 ; Rise       ; clock           ;
+;  readdata[30] ; clock      ; 4.626 ; 4.626 ; Rise       ; clock           ;
+;  readdata[31] ; clock      ; 4.745 ; 4.745 ; Rise       ; clock           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; readdata[*]   ; clock      ; 3.883 ; 3.883 ; Rise       ; clock           ;
+;  readdata[0]  ; clock      ; 4.345 ; 4.345 ; Rise       ; clock           ;
+;  readdata[1]  ; clock      ; 4.286 ; 4.286 ; Rise       ; clock           ;
+;  readdata[2]  ; clock      ; 3.942 ; 3.942 ; Rise       ; clock           ;
+;  readdata[3]  ; clock      ; 3.939 ; 3.939 ; Rise       ; clock           ;
+;  readdata[4]  ; clock      ; 4.073 ; 4.073 ; Rise       ; clock           ;
+;  readdata[5]  ; clock      ; 3.956 ; 3.956 ; Rise       ; clock           ;
+;  readdata[6]  ; clock      ; 3.960 ; 3.960 ; Rise       ; clock           ;
+;  readdata[7]  ; clock      ; 4.127 ; 4.127 ; Rise       ; clock           ;
+;  readdata[8]  ; clock      ; 4.204 ; 4.204 ; Rise       ; clock           ;
+;  readdata[9]  ; clock      ; 3.928 ; 3.928 ; Rise       ; clock           ;
+;  readdata[10] ; clock      ; 3.883 ; 3.883 ; Rise       ; clock           ;
+;  readdata[11] ; clock      ; 3.920 ; 3.920 ; Rise       ; clock           ;
+;  readdata[12] ; clock      ; 4.285 ; 4.285 ; Rise       ; clock           ;
+;  readdata[13] ; clock      ; 4.062 ; 4.062 ; Rise       ; clock           ;
+;  readdata[14] ; clock      ; 4.063 ; 4.063 ; Rise       ; clock           ;
+;  readdata[15] ; clock      ; 3.924 ; 3.924 ; Rise       ; clock           ;
+;  readdata[16] ; clock      ; 4.207 ; 4.207 ; Rise       ; clock           ;
+;  readdata[17] ; clock      ; 4.172 ; 4.172 ; Rise       ; clock           ;
+;  readdata[18] ; clock      ; 4.115 ; 4.115 ; Rise       ; clock           ;
+;  readdata[19] ; clock      ; 4.170 ; 4.170 ; Rise       ; clock           ;
+;  readdata[20] ; clock      ; 4.138 ; 4.138 ; Rise       ; clock           ;
+;  readdata[21] ; clock      ; 4.060 ; 4.060 ; Rise       ; clock           ;
+;  readdata[22] ; clock      ; 4.032 ; 4.032 ; Rise       ; clock           ;
+;  readdata[23] ; clock      ; 4.186 ; 4.186 ; Rise       ; clock           ;
+;  readdata[24] ; clock      ; 4.046 ; 4.046 ; Rise       ; clock           ;
+;  readdata[25] ; clock      ; 4.294 ; 4.294 ; Rise       ; clock           ;
+;  readdata[26] ; clock      ; 4.021 ; 4.021 ; Rise       ; clock           ;
+;  readdata[27] ; clock      ; 4.021 ; 4.021 ; Rise       ; clock           ;
+;  readdata[28] ; clock      ; 4.217 ; 4.217 ; Rise       ; clock           ;
+;  readdata[29] ; clock      ; 4.080 ; 4.080 ; Rise       ; clock           ;
+;  readdata[30] ; clock      ; 4.017 ; 4.017 ; Rise       ; clock           ;
+;  readdata[31] ; clock      ; 4.035 ; 4.035 ; Rise       ; clock           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------+
+; Propagation Delay                                         ;
++------------+--------------+-------+-------+-------+-------+
+; Input Port ; Output Port  ; RR    ; RF    ; FR    ; FF    ;
++------------+--------------+-------+-------+-------+-------+
+; add[0]     ; readdata[0]  ; 6.518 ; 6.518 ; 6.518 ; 6.518 ;
+; add[0]     ; readdata[1]  ; 6.960 ; 6.960 ; 6.960 ; 6.960 ;
+; add[0]     ; readdata[2]  ; 6.074 ; 6.074 ; 6.074 ; 6.074 ;
+; add[0]     ; readdata[3]  ; 6.339 ; 6.339 ; 6.339 ; 6.339 ;
+; add[0]     ; readdata[4]  ; 6.812 ; 6.812 ; 6.812 ; 6.812 ;
+; add[0]     ; readdata[5]  ; 6.229 ; 6.229 ; 6.229 ; 6.229 ;
+; add[0]     ; readdata[6]  ; 6.234 ; 6.234 ; 6.234 ; 6.234 ;
+; add[0]     ; readdata[7]  ; 6.252 ; 6.252 ; 6.252 ; 6.252 ;
+; add[0]     ; readdata[8]  ; 6.940 ; 6.940 ; 6.940 ; 6.940 ;
+; add[0]     ; readdata[9]  ; 6.059 ; 6.059 ; 6.059 ; 6.059 ;
+; add[0]     ; readdata[10] ; 6.156 ; 6.156 ; 6.156 ; 6.156 ;
+; add[0]     ; readdata[11] ; 6.427 ; 6.427 ; 6.427 ; 6.427 ;
+; add[0]     ; readdata[12] ; 7.348 ; 7.348 ; 7.348 ; 7.348 ;
+; add[0]     ; readdata[13] ; 6.799 ; 6.799 ; 6.799 ; 6.799 ;
+; add[0]     ; readdata[14] ; 6.562 ; 6.562 ; 6.562 ; 6.562 ;
+; add[0]     ; readdata[15] ; 6.535 ; 6.535 ; 6.535 ; 6.535 ;
+; add[0]     ; readdata[16] ; 7.255 ; 7.255 ; 7.255 ; 7.255 ;
+; add[0]     ; readdata[17] ; 6.832 ; 6.832 ; 6.832 ; 6.832 ;
+; add[0]     ; readdata[18] ; 6.279 ; 6.279 ; 6.279 ; 6.279 ;
+; add[0]     ; readdata[19] ; 6.857 ; 6.857 ; 6.857 ; 6.857 ;
+; add[0]     ; readdata[20] ; 6.857 ; 6.857 ; 6.857 ; 6.857 ;
+; add[0]     ; readdata[21] ; 6.698 ; 6.698 ; 6.698 ; 6.698 ;
+; add[0]     ; readdata[22] ; 6.688 ; 6.688 ; 6.688 ; 6.688 ;
+; add[0]     ; readdata[23] ; 6.832 ; 6.832 ; 6.832 ; 6.832 ;
+; add[0]     ; readdata[24] ; 6.780 ; 6.780 ; 6.780 ; 6.780 ;
+; add[0]     ; readdata[25] ; 6.989 ; 6.989 ; 6.989 ; 6.989 ;
+; add[0]     ; readdata[26] ; 6.337 ; 6.337 ; 6.337 ; 6.337 ;
+; add[0]     ; readdata[27] ; 6.332 ; 6.332 ; 6.332 ; 6.332 ;
+; add[0]     ; readdata[28] ; 6.744 ; 6.744 ; 6.744 ; 6.744 ;
+; add[0]     ; readdata[29] ; 6.282 ; 6.282 ; 6.282 ; 6.282 ;
+; add[0]     ; readdata[30] ; 6.220 ; 6.220 ; 6.220 ; 6.220 ;
+; add[0]     ; readdata[31] ; 6.216 ; 6.216 ; 6.216 ; 6.216 ;
+; add[1]     ; readdata[0]  ; 6.818 ; 6.818 ; 6.818 ; 6.818 ;
+; add[1]     ; readdata[1]  ; 6.831 ; 6.831 ; 6.831 ; 6.831 ;
+; add[1]     ; readdata[2]  ; 6.279 ; 6.279 ; 6.279 ; 6.279 ;
+; add[1]     ; readdata[3]  ; 6.157 ; 6.157 ; 6.157 ; 6.157 ;
+; add[1]     ; readdata[4]  ; 6.859 ; 6.859 ; 6.859 ; 6.859 ;
+; add[1]     ; readdata[5]  ; 6.177 ; 6.177 ; 6.177 ; 6.177 ;
+; add[1]     ; readdata[6]  ; 6.181 ; 6.181 ; 6.181 ; 6.181 ;
+; add[1]     ; readdata[7]  ; 6.463 ; 6.463 ; 6.463 ; 6.463 ;
+; add[1]     ; readdata[8]  ; 6.992 ; 6.992 ; 6.992 ; 6.992 ;
+; add[1]     ; readdata[9]  ; 6.256 ; 6.256 ; 6.256 ; 6.256 ;
+; add[1]     ; readdata[10] ; 6.099 ; 6.099 ; 6.099 ; 6.099 ;
+; add[1]     ; readdata[11] ; 6.140 ; 6.615 ; 6.615 ; 6.140 ;
+; add[1]     ; readdata[12] ; 7.078 ; 7.655 ; 7.655 ; 7.078 ;
+; add[1]     ; readdata[13] ; 6.857 ; 7.343 ; 7.343 ; 6.857 ;
+; add[1]     ; readdata[14] ; 6.284 ; 6.747 ; 6.747 ; 6.284 ;
+; add[1]     ; readdata[15] ; 6.134 ; 6.723 ; 6.723 ; 6.134 ;
+; add[1]     ; readdata[16] ; 7.000 ; 7.563 ; 7.563 ; 7.000 ;
+; add[1]     ; readdata[17] ; 6.959 ; 7.299 ; 7.299 ; 6.959 ;
+; add[1]     ; readdata[18] ; 6.903 ; 7.376 ; 7.376 ; 6.903 ;
+; add[1]     ; readdata[19] ; 6.956 ; 7.443 ; 7.443 ; 6.956 ;
+; add[1]     ; readdata[20] ; 6.934 ; 7.316 ; 7.316 ; 6.934 ;
+; add[1]     ; readdata[21] ; 6.850 ; 7.325 ; 7.325 ; 6.850 ;
+; add[1]     ; readdata[22] ; 6.828 ; 7.288 ; 7.288 ; 6.828 ;
+; add[1]     ; readdata[23] ; 6.982 ; 7.309 ; 7.309 ; 6.982 ;
+; add[1]     ; readdata[24] ; 6.841 ; 7.326 ; 7.326 ; 6.841 ;
+; add[1]     ; readdata[25] ; 6.860 ; 7.043 ; 7.043 ; 6.860 ;
+; add[1]     ; readdata[26] ; 6.235 ; 6.769 ; 6.769 ; 6.235 ;
+; add[1]     ; readdata[27] ; 6.234 ; 6.758 ; 6.758 ; 6.234 ;
+; add[1]     ; readdata[28] ; 6.432 ; 6.930 ; 6.930 ; 6.432 ;
+; add[1]     ; readdata[29] ; 6.294 ; 6.832 ; 6.832 ; 6.294 ;
+; add[1]     ; readdata[30] ; 6.229 ; 6.764 ; 6.764 ; 6.229 ;
+; add[1]     ; readdata[31] ; 6.252 ; 6.764 ; 6.764 ; 6.252 ;
+; chipselect ; readdata[0]  ; 6.867 ; 6.867 ; 6.867 ; 6.867 ;
+; chipselect ; readdata[1]  ; 6.881 ; 6.881 ; 6.881 ; 6.881 ;
+; chipselect ; readdata[2]  ; 6.328 ; 6.328 ; 6.328 ; 6.328 ;
+; chipselect ; readdata[3]  ; 6.206 ; 6.206 ; 6.206 ; 6.206 ;
+; chipselect ; readdata[4]  ; 6.908 ; 6.908 ; 6.908 ; 6.908 ;
+; chipselect ; readdata[5]  ; 6.226 ; 6.226 ; 6.226 ; 6.226 ;
+; chipselect ; readdata[6]  ; 6.230 ; 6.230 ; 6.230 ; 6.230 ;
+; chipselect ; readdata[7]  ; 6.512 ; 6.512 ; 6.512 ; 6.512 ;
+; chipselect ; readdata[8]  ; 7.041 ; 7.041 ; 7.041 ; 7.041 ;
+; chipselect ; readdata[9]  ; 6.305 ; 6.305 ; 6.305 ; 6.305 ;
+; chipselect ; readdata[10] ; 6.148 ; 6.148 ; 6.148 ; 6.148 ;
+; chipselect ; readdata[11] ; 6.664 ; 6.189 ; 6.189 ; 6.664 ;
+; chipselect ; readdata[12] ; 7.704 ; 7.127 ; 7.127 ; 7.704 ;
+; chipselect ; readdata[13] ; 7.392 ; 6.906 ; 6.906 ; 7.392 ;
+; chipselect ; readdata[14] ; 6.796 ; 6.333 ; 6.333 ; 6.796 ;
+; chipselect ; readdata[15] ; 6.772 ; 6.183 ; 6.183 ; 6.772 ;
+; chipselect ; readdata[16] ; 7.612 ; 7.049 ; 7.049 ; 7.612 ;
+; chipselect ; readdata[17] ; 7.348 ; 7.008 ; 7.008 ; 7.348 ;
+; chipselect ; readdata[18] ; 7.425 ; 6.952 ; 6.952 ; 7.425 ;
+; chipselect ; readdata[19] ; 7.492 ; 7.005 ; 7.005 ; 7.492 ;
+; chipselect ; readdata[20] ; 7.365 ; 6.983 ; 6.983 ; 7.365 ;
+; chipselect ; readdata[21] ; 7.374 ; 6.899 ; 6.899 ; 7.374 ;
+; chipselect ; readdata[22] ; 7.337 ; 6.877 ; 6.877 ; 7.337 ;
+; chipselect ; readdata[23] ; 7.358 ; 7.031 ; 7.031 ; 7.358 ;
+; chipselect ; readdata[24] ; 7.375 ; 6.890 ; 6.890 ; 7.375 ;
+; chipselect ; readdata[25] ; 7.092 ; 6.910 ; 6.910 ; 7.092 ;
+; chipselect ; readdata[26] ; 6.818 ; 6.284 ; 6.284 ; 6.818 ;
+; chipselect ; readdata[27] ; 6.807 ; 6.283 ; 6.283 ; 6.807 ;
+; chipselect ; readdata[28] ; 6.979 ; 6.481 ; 6.481 ; 6.979 ;
+; chipselect ; readdata[29] ; 6.881 ; 6.343 ; 6.343 ; 6.881 ;
+; chipselect ; readdata[30] ; 6.813 ; 6.278 ; 6.278 ; 6.813 ;
+; chipselect ; readdata[31] ; 6.813 ; 6.301 ; 6.301 ; 6.813 ;
+; read_en    ; readdata[0]  ; 6.925 ; 6.925 ; 6.925 ; 6.925 ;
+; read_en    ; readdata[1]  ; 6.937 ; 6.937 ; 6.937 ; 6.937 ;
+; read_en    ; readdata[2]  ; 6.386 ; 6.386 ; 6.386 ; 6.386 ;
+; read_en    ; readdata[3]  ; 6.264 ; 6.264 ; 6.264 ; 6.264 ;
+; read_en    ; readdata[4]  ; 6.966 ; 6.966 ; 6.966 ; 6.966 ;
+; read_en    ; readdata[5]  ; 6.284 ; 6.284 ; 6.284 ; 6.284 ;
+; read_en    ; readdata[6]  ; 6.288 ; 6.288 ; 6.288 ; 6.288 ;
+; read_en    ; readdata[7]  ; 6.570 ; 6.570 ; 6.570 ; 6.570 ;
+; read_en    ; readdata[8]  ; 7.099 ; 7.099 ; 7.099 ; 7.099 ;
+; read_en    ; readdata[9]  ; 6.363 ; 6.363 ; 6.363 ; 6.363 ;
+; read_en    ; readdata[10] ; 6.206 ; 6.206 ; 6.206 ; 6.206 ;
+; read_en    ; readdata[11] ; 6.722 ; 6.247 ; 6.247 ; 6.722 ;
+; read_en    ; readdata[12] ; 7.762 ; 7.185 ; 7.185 ; 7.762 ;
+; read_en    ; readdata[13] ; 7.450 ; 6.964 ; 6.964 ; 7.450 ;
+; read_en    ; readdata[14] ; 6.854 ; 6.391 ; 6.391 ; 6.854 ;
+; read_en    ; readdata[15] ; 6.830 ; 6.241 ; 6.241 ; 6.830 ;
+; read_en    ; readdata[16] ; 7.670 ; 7.107 ; 7.107 ; 7.670 ;
+; read_en    ; readdata[17] ; 7.406 ; 7.066 ; 7.066 ; 7.406 ;
+; read_en    ; readdata[18] ; 7.483 ; 7.010 ; 7.010 ; 7.483 ;
+; read_en    ; readdata[19] ; 7.550 ; 7.063 ; 7.063 ; 7.550 ;
+; read_en    ; readdata[20] ; 7.423 ; 7.041 ; 7.041 ; 7.423 ;
+; read_en    ; readdata[21] ; 7.432 ; 6.957 ; 6.957 ; 7.432 ;
+; read_en    ; readdata[22] ; 7.395 ; 6.935 ; 6.935 ; 7.395 ;
+; read_en    ; readdata[23] ; 7.416 ; 7.089 ; 7.089 ; 7.416 ;
+; read_en    ; readdata[24] ; 7.433 ; 6.948 ; 6.948 ; 7.433 ;
+; read_en    ; readdata[25] ; 7.150 ; 6.966 ; 6.966 ; 7.150 ;
+; read_en    ; readdata[26] ; 6.876 ; 6.342 ; 6.342 ; 6.876 ;
+; read_en    ; readdata[27] ; 6.865 ; 6.341 ; 6.341 ; 6.865 ;
+; read_en    ; readdata[28] ; 7.037 ; 6.539 ; 6.539 ; 7.037 ;
+; read_en    ; readdata[29] ; 6.939 ; 6.401 ; 6.401 ; 6.939 ;
+; read_en    ; readdata[30] ; 6.871 ; 6.336 ; 6.336 ; 6.871 ;
+; read_en    ; readdata[31] ; 6.871 ; 6.359 ; 6.359 ; 6.871 ;
++------------+--------------+-------+-------+-------+-------+
+
+
++-----------------------------------------------------------+
+; Minimum Propagation Delay                                 ;
++------------+--------------+-------+-------+-------+-------+
+; Input Port ; Output Port  ; RR    ; RF    ; FR    ; FF    ;
++------------+--------------+-------+-------+-------+-------+
+; add[0]     ; readdata[0]  ; 6.142 ; 6.142 ; 6.142 ; 6.142 ;
+; add[0]     ; readdata[1]  ; 6.367 ; 6.367 ; 6.367 ; 6.367 ;
+; add[0]     ; readdata[2]  ; 5.913 ; 5.913 ; 5.913 ; 5.913 ;
+; add[0]     ; readdata[3]  ; 5.934 ; 5.934 ; 5.934 ; 5.934 ;
+; add[0]     ; readdata[4]  ; 6.728 ; 6.728 ; 6.728 ; 6.728 ;
+; add[0]     ; readdata[5]  ; 5.960 ; 5.960 ; 5.960 ; 5.960 ;
+; add[0]     ; readdata[6]  ; 5.961 ; 5.961 ; 5.961 ; 5.961 ;
+; add[0]     ; readdata[7]  ; 6.101 ; 6.101 ; 6.101 ; 6.101 ;
+; add[0]     ; readdata[8]  ; 6.847 ; 6.847 ; 6.847 ; 6.847 ;
+; add[0]     ; readdata[9]  ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; add[0]     ; readdata[10] ; 5.908 ; 5.908 ; 5.908 ; 5.908 ;
+; add[0]     ; readdata[11] ; 5.950 ; 5.950 ; 5.950 ; 5.950 ;
+; add[0]     ; readdata[12] ; 6.831 ; 6.831 ; 6.831 ; 6.831 ;
+; add[0]     ; readdata[13] ; 6.101 ; 6.101 ; 6.101 ; 6.101 ;
+; add[0]     ; readdata[14] ; 6.064 ; 6.064 ; 6.064 ; 6.064 ;
+; add[0]     ; readdata[15] ; 5.960 ; 5.960 ; 5.960 ; 5.960 ;
+; add[0]     ; readdata[16] ; 6.857 ; 6.857 ; 6.857 ; 6.857 ;
+; add[0]     ; readdata[17] ; 6.336 ; 6.336 ; 6.336 ; 6.336 ;
+; add[0]     ; readdata[18] ; 6.121 ; 6.121 ; 6.121 ; 6.121 ;
+; add[0]     ; readdata[19] ; 6.345 ; 6.345 ; 6.345 ; 6.345 ;
+; add[0]     ; readdata[20] ; 6.355 ; 6.355 ; 6.355 ; 6.355 ;
+; add[0]     ; readdata[21] ; 6.226 ; 6.226 ; 6.226 ; 6.226 ;
+; add[0]     ; readdata[22] ; 6.192 ; 6.192 ; 6.192 ; 6.192 ;
+; add[0]     ; readdata[23] ; 6.349 ; 6.349 ; 6.349 ; 6.349 ;
+; add[0]     ; readdata[24] ; 6.518 ; 6.518 ; 6.518 ; 6.518 ;
+; add[0]     ; readdata[25] ; 6.497 ; 6.497 ; 6.497 ; 6.497 ;
+; add[0]     ; readdata[26] ; 5.934 ; 5.934 ; 5.934 ; 5.934 ;
+; add[0]     ; readdata[27] ; 5.923 ; 5.923 ; 5.923 ; 5.923 ;
+; add[0]     ; readdata[28] ; 6.101 ; 6.101 ; 6.101 ; 6.101 ;
+; add[0]     ; readdata[29] ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; add[0]     ; readdata[30] ; 5.950 ; 5.950 ; 5.950 ; 5.950 ;
+; add[0]     ; readdata[31] ; 5.961 ; 5.961 ; 5.961 ; 5.961 ;
+; add[1]     ; readdata[0]  ; 6.389 ; 6.389 ; 6.389 ; 6.389 ;
+; add[1]     ; readdata[1]  ; 6.540 ; 6.540 ; 6.540 ; 6.540 ;
+; add[1]     ; readdata[2]  ; 5.784 ; 5.784 ; 5.784 ; 5.784 ;
+; add[1]     ; readdata[3]  ; 5.805 ; 5.805 ; 5.805 ; 5.805 ;
+; add[1]     ; readdata[4]  ; 6.599 ; 6.599 ; 6.599 ; 6.599 ;
+; add[1]     ; readdata[5]  ; 5.831 ; 5.831 ; 5.831 ; 5.831 ;
+; add[1]     ; readdata[6]  ; 5.832 ; 5.832 ; 5.832 ; 5.832 ;
+; add[1]     ; readdata[7]  ; 5.972 ; 5.972 ; 5.972 ; 5.972 ;
+; add[1]     ; readdata[8]  ; 6.718 ; 6.718 ; 6.718 ; 6.718 ;
+; add[1]     ; readdata[9]  ; 5.822 ; 5.822 ; 5.822 ; 5.822 ;
+; add[1]     ; readdata[10] ; 5.779 ; 5.779 ; 5.779 ; 5.779 ;
+; add[1]     ; readdata[11] ; 5.821 ; 5.821 ; 5.821 ; 5.821 ;
+; add[1]     ; readdata[12] ; 6.702 ; 6.702 ; 6.702 ; 6.702 ;
+; add[1]     ; readdata[13] ; 5.972 ; 5.972 ; 5.972 ; 5.972 ;
+; add[1]     ; readdata[14] ; 5.935 ; 5.935 ; 5.935 ; 5.935 ;
+; add[1]     ; readdata[15] ; 5.831 ; 5.831 ; 5.831 ; 5.831 ;
+; add[1]     ; readdata[16] ; 6.728 ; 6.728 ; 6.728 ; 6.728 ;
+; add[1]     ; readdata[17] ; 6.703 ; 6.703 ; 6.703 ; 6.703 ;
+; add[1]     ; readdata[18] ; 5.992 ; 5.992 ; 5.992 ; 5.992 ;
+; add[1]     ; readdata[19] ; 6.728 ; 6.728 ; 6.728 ; 6.728 ;
+; add[1]     ; readdata[20] ; 6.728 ; 6.728 ; 6.728 ; 6.728 ;
+; add[1]     ; readdata[21] ; 6.569 ; 6.569 ; 6.569 ; 6.569 ;
+; add[1]     ; readdata[22] ; 6.559 ; 6.559 ; 6.559 ; 6.559 ;
+; add[1]     ; readdata[23] ; 6.703 ; 6.703 ; 6.703 ; 6.703 ;
+; add[1]     ; readdata[24] ; 6.389 ; 6.389 ; 6.389 ; 6.389 ;
+; add[1]     ; readdata[25] ; 6.509 ; 6.860 ; 6.860 ; 6.509 ;
+; add[1]     ; readdata[26] ; 5.805 ; 5.805 ; 5.805 ; 5.805 ;
+; add[1]     ; readdata[27] ; 5.794 ; 5.794 ; 5.794 ; 5.794 ;
+; add[1]     ; readdata[28] ; 5.972 ; 5.972 ; 5.972 ; 5.972 ;
+; add[1]     ; readdata[29] ; 5.822 ; 5.822 ; 5.822 ; 5.822 ;
+; add[1]     ; readdata[30] ; 5.821 ; 5.821 ; 5.821 ; 5.821 ;
+; add[1]     ; readdata[31] ; 5.832 ; 5.832 ; 5.832 ; 5.832 ;
+; chipselect ; readdata[0]  ; 6.439 ; 6.439 ; 6.439 ; 6.439 ;
+; chipselect ; readdata[1]  ; 6.589 ; 6.589 ; 6.589 ; 6.589 ;
+; chipselect ; readdata[2]  ; 5.834 ; 5.834 ; 5.834 ; 5.834 ;
+; chipselect ; readdata[3]  ; 5.855 ; 5.855 ; 5.855 ; 5.855 ;
+; chipselect ; readdata[4]  ; 6.649 ; 6.649 ; 6.649 ; 6.649 ;
+; chipselect ; readdata[5]  ; 5.881 ; 5.881 ; 5.881 ; 5.881 ;
+; chipselect ; readdata[6]  ; 5.882 ; 5.882 ; 5.882 ; 5.882 ;
+; chipselect ; readdata[7]  ; 6.022 ; 6.022 ; 6.022 ; 6.022 ;
+; chipselect ; readdata[8]  ; 6.768 ; 6.768 ; 6.768 ; 6.768 ;
+; chipselect ; readdata[9]  ; 5.872 ; 5.872 ; 5.872 ; 5.872 ;
+; chipselect ; readdata[10] ; 5.829 ; 5.829 ; 5.829 ; 5.829 ;
+; chipselect ; readdata[11] ; 5.871 ; 5.871 ; 5.871 ; 5.871 ;
+; chipselect ; readdata[12] ; 6.752 ; 6.752 ; 6.752 ; 6.752 ;
+; chipselect ; readdata[13] ; 6.022 ; 6.022 ; 6.022 ; 6.022 ;
+; chipselect ; readdata[14] ; 5.985 ; 5.985 ; 5.985 ; 5.985 ;
+; chipselect ; readdata[15] ; 5.881 ; 5.881 ; 5.881 ; 5.881 ;
+; chipselect ; readdata[16] ; 6.778 ; 6.778 ; 6.778 ; 6.778 ;
+; chipselect ; readdata[17] ; 6.753 ; 6.753 ; 6.753 ; 6.753 ;
+; chipselect ; readdata[18] ; 6.042 ; 6.042 ; 6.042 ; 6.042 ;
+; chipselect ; readdata[19] ; 6.778 ; 6.778 ; 6.778 ; 6.778 ;
+; chipselect ; readdata[20] ; 6.778 ; 6.778 ; 6.778 ; 6.778 ;
+; chipselect ; readdata[21] ; 6.619 ; 6.619 ; 6.619 ; 6.619 ;
+; chipselect ; readdata[22] ; 6.609 ; 6.609 ; 6.609 ; 6.609 ;
+; chipselect ; readdata[23] ; 6.753 ; 6.753 ; 6.753 ; 6.753 ;
+; chipselect ; readdata[24] ; 6.439 ; 6.439 ; 6.439 ; 6.439 ;
+; chipselect ; readdata[25] ; 6.910 ; 6.558 ; 6.558 ; 6.910 ;
+; chipselect ; readdata[26] ; 5.855 ; 5.855 ; 5.855 ; 5.855 ;
+; chipselect ; readdata[27] ; 5.844 ; 5.844 ; 5.844 ; 5.844 ;
+; chipselect ; readdata[28] ; 6.022 ; 6.022 ; 6.022 ; 6.022 ;
+; chipselect ; readdata[29] ; 5.872 ; 5.872 ; 5.872 ; 5.872 ;
+; chipselect ; readdata[30] ; 5.871 ; 5.871 ; 5.871 ; 5.871 ;
+; chipselect ; readdata[31] ; 5.882 ; 5.882 ; 5.882 ; 5.882 ;
+; read_en    ; readdata[0]  ; 6.495 ; 6.495 ; 6.495 ; 6.495 ;
+; read_en    ; readdata[1]  ; 6.647 ; 6.647 ; 6.647 ; 6.647 ;
+; read_en    ; readdata[2]  ; 5.890 ; 5.890 ; 5.890 ; 5.890 ;
+; read_en    ; readdata[3]  ; 5.911 ; 5.911 ; 5.911 ; 5.911 ;
+; read_en    ; readdata[4]  ; 6.705 ; 6.705 ; 6.705 ; 6.705 ;
+; read_en    ; readdata[5]  ; 5.937 ; 5.937 ; 5.937 ; 5.937 ;
+; read_en    ; readdata[6]  ; 5.938 ; 5.938 ; 5.938 ; 5.938 ;
+; read_en    ; readdata[7]  ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; read_en    ; readdata[8]  ; 6.824 ; 6.824 ; 6.824 ; 6.824 ;
+; read_en    ; readdata[9]  ; 5.928 ; 5.928 ; 5.928 ; 5.928 ;
+; read_en    ; readdata[10] ; 5.885 ; 5.885 ; 5.885 ; 5.885 ;
+; read_en    ; readdata[11] ; 5.927 ; 5.927 ; 5.927 ; 5.927 ;
+; read_en    ; readdata[12] ; 6.808 ; 6.808 ; 6.808 ; 6.808 ;
+; read_en    ; readdata[13] ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; read_en    ; readdata[14] ; 6.041 ; 6.041 ; 6.041 ; 6.041 ;
+; read_en    ; readdata[15] ; 5.937 ; 5.937 ; 5.937 ; 5.937 ;
+; read_en    ; readdata[16] ; 6.834 ; 6.834 ; 6.834 ; 6.834 ;
+; read_en    ; readdata[17] ; 6.809 ; 6.809 ; 6.809 ; 6.809 ;
+; read_en    ; readdata[18] ; 6.098 ; 6.098 ; 6.098 ; 6.098 ;
+; read_en    ; readdata[19] ; 6.834 ; 6.834 ; 6.834 ; 6.834 ;
+; read_en    ; readdata[20] ; 6.834 ; 6.834 ; 6.834 ; 6.834 ;
+; read_en    ; readdata[21] ; 6.675 ; 6.675 ; 6.675 ; 6.675 ;
+; read_en    ; readdata[22] ; 6.665 ; 6.665 ; 6.665 ; 6.665 ;
+; read_en    ; readdata[23] ; 6.809 ; 6.809 ; 6.809 ; 6.809 ;
+; read_en    ; readdata[24] ; 6.495 ; 6.495 ; 6.495 ; 6.495 ;
+; read_en    ; readdata[25] ; 6.966 ; 6.616 ; 6.616 ; 6.966 ;
+; read_en    ; readdata[26] ; 5.911 ; 5.911 ; 5.911 ; 5.911 ;
+; read_en    ; readdata[27] ; 5.900 ; 5.900 ; 5.900 ; 5.900 ;
+; read_en    ; readdata[28] ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; read_en    ; readdata[29] ; 5.928 ; 5.928 ; 5.928 ; 5.928 ;
+; read_en    ; readdata[30] ; 5.927 ; 5.927 ; 5.927 ; 5.927 ;
+; read_en    ; readdata[31] ; 5.938 ; 5.938 ; 5.938 ; 5.938 ;
++------------+--------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -1.380              ;
+;  clock           ; N/A   ; N/A  ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -97.38              ;
+;  clock           ; N/A   ; N/A  ; N/A      ; N/A     ; -97.380             ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; add[*]         ; clock      ; 6.874 ; 6.874 ; Rise       ; clock           ;
+;  add[0]        ; clock      ; 6.874 ; 6.874 ; Rise       ; clock           ;
+;  add[1]        ; clock      ; 6.799 ; 6.799 ; Rise       ; clock           ;
+; chipselect     ; clock      ; 6.425 ; 6.425 ; Rise       ; clock           ;
+; write_en       ; clock      ; 6.354 ; 6.354 ; Rise       ; clock           ;
+; writedata[*]   ; clock      ; 5.175 ; 5.175 ; Rise       ; clock           ;
+;  writedata[0]  ; clock      ; 4.521 ; 4.521 ; Rise       ; clock           ;
+;  writedata[1]  ; clock      ; 3.847 ; 3.847 ; Rise       ; clock           ;
+;  writedata[2]  ; clock      ; 3.907 ; 3.907 ; Rise       ; clock           ;
+;  writedata[3]  ; clock      ; 3.603 ; 3.603 ; Rise       ; clock           ;
+;  writedata[4]  ; clock      ; 4.451 ; 4.451 ; Rise       ; clock           ;
+;  writedata[5]  ; clock      ; 3.629 ; 3.629 ; Rise       ; clock           ;
+;  writedata[6]  ; clock      ; 4.408 ; 4.408 ; Rise       ; clock           ;
+;  writedata[7]  ; clock      ; 4.058 ; 4.058 ; Rise       ; clock           ;
+;  writedata[8]  ; clock      ; 4.224 ; 4.224 ; Rise       ; clock           ;
+;  writedata[9]  ; clock      ; 3.731 ; 3.731 ; Rise       ; clock           ;
+;  writedata[10] ; clock      ; 3.908 ; 3.908 ; Rise       ; clock           ;
+;  writedata[11] ; clock      ; 4.295 ; 4.295 ; Rise       ; clock           ;
+;  writedata[12] ; clock      ; 4.272 ; 4.272 ; Rise       ; clock           ;
+;  writedata[13] ; clock      ; 3.832 ; 3.832 ; Rise       ; clock           ;
+;  writedata[14] ; clock      ; 3.688 ; 3.688 ; Rise       ; clock           ;
+;  writedata[15] ; clock      ; 4.106 ; 4.106 ; Rise       ; clock           ;
+;  writedata[16] ; clock      ; 4.179 ; 4.179 ; Rise       ; clock           ;
+;  writedata[17] ; clock      ; 4.019 ; 4.019 ; Rise       ; clock           ;
+;  writedata[18] ; clock      ; 3.670 ; 3.670 ; Rise       ; clock           ;
+;  writedata[19] ; clock      ; 3.949 ; 3.949 ; Rise       ; clock           ;
+;  writedata[20] ; clock      ; 3.709 ; 3.709 ; Rise       ; clock           ;
+;  writedata[21] ; clock      ; 3.973 ; 3.973 ; Rise       ; clock           ;
+;  writedata[22] ; clock      ; 4.065 ; 4.065 ; Rise       ; clock           ;
+;  writedata[23] ; clock      ; 3.980 ; 3.980 ; Rise       ; clock           ;
+;  writedata[24] ; clock      ; 5.175 ; 5.175 ; Rise       ; clock           ;
+;  writedata[25] ; clock      ; 4.220 ; 4.220 ; Rise       ; clock           ;
+;  writedata[26] ; clock      ; 3.553 ; 3.553 ; Rise       ; clock           ;
+;  writedata[27] ; clock      ; 3.613 ; 3.613 ; Rise       ; clock           ;
+;  writedata[28] ; clock      ; 3.626 ; 3.626 ; Rise       ; clock           ;
+;  writedata[29] ; clock      ; 3.990 ; 3.990 ; Rise       ; clock           ;
+;  writedata[30] ; clock      ; 3.903 ; 3.903 ; Rise       ; clock           ;
+;  writedata[31] ; clock      ; 3.875 ; 3.875 ; Rise       ; clock           ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; add[*]         ; clock      ; -2.573 ; -2.573 ; Rise       ; clock           ;
+;  add[0]        ; clock      ; -2.573 ; -2.573 ; Rise       ; clock           ;
+;  add[1]        ; clock      ; -2.586 ; -2.586 ; Rise       ; clock           ;
+; chipselect     ; clock      ; -2.371 ; -2.371 ; Rise       ; clock           ;
+; write_en       ; clock      ; -2.335 ; -2.335 ; Rise       ; clock           ;
+; writedata[*]   ; clock      ; -1.742 ; -1.742 ; Rise       ; clock           ;
+;  writedata[0]  ; clock      ; -2.021 ; -2.021 ; Rise       ; clock           ;
+;  writedata[1]  ; clock      ; -1.814 ; -1.814 ; Rise       ; clock           ;
+;  writedata[2]  ; clock      ; -1.808 ; -1.808 ; Rise       ; clock           ;
+;  writedata[3]  ; clock      ; -1.742 ; -1.742 ; Rise       ; clock           ;
+;  writedata[4]  ; clock      ; -2.049 ; -2.049 ; Rise       ; clock           ;
+;  writedata[5]  ; clock      ; -1.766 ; -1.766 ; Rise       ; clock           ;
+;  writedata[6]  ; clock      ; -1.901 ; -1.901 ; Rise       ; clock           ;
+;  writedata[7]  ; clock      ; -2.013 ; -2.013 ; Rise       ; clock           ;
+;  writedata[8]  ; clock      ; -1.972 ; -1.972 ; Rise       ; clock           ;
+;  writedata[9]  ; clock      ; -1.907 ; -1.907 ; Rise       ; clock           ;
+;  writedata[10] ; clock      ; -1.887 ; -1.887 ; Rise       ; clock           ;
+;  writedata[11] ; clock      ; -2.163 ; -2.163 ; Rise       ; clock           ;
+;  writedata[12] ; clock      ; -1.944 ; -1.944 ; Rise       ; clock           ;
+;  writedata[13] ; clock      ; -1.976 ; -1.976 ; Rise       ; clock           ;
+;  writedata[14] ; clock      ; -1.892 ; -1.892 ; Rise       ; clock           ;
+;  writedata[15] ; clock      ; -1.975 ; -1.975 ; Rise       ; clock           ;
+;  writedata[16] ; clock      ; -1.963 ; -1.963 ; Rise       ; clock           ;
+;  writedata[17] ; clock      ; -1.959 ; -1.959 ; Rise       ; clock           ;
+;  writedata[18] ; clock      ; -1.921 ; -1.921 ; Rise       ; clock           ;
+;  writedata[19] ; clock      ; -1.826 ; -1.826 ; Rise       ; clock           ;
+;  writedata[20] ; clock      ; -1.935 ; -1.935 ; Rise       ; clock           ;
+;  writedata[21] ; clock      ; -1.928 ; -1.928 ; Rise       ; clock           ;
+;  writedata[22] ; clock      ; -1.957 ; -1.957 ; Rise       ; clock           ;
+;  writedata[23] ; clock      ; -2.015 ; -2.015 ; Rise       ; clock           ;
+;  writedata[24] ; clock      ; -2.127 ; -2.127 ; Rise       ; clock           ;
+;  writedata[25] ; clock      ; -2.045 ; -2.045 ; Rise       ; clock           ;
+;  writedata[26] ; clock      ; -1.820 ; -1.820 ; Rise       ; clock           ;
+;  writedata[27] ; clock      ; -1.853 ; -1.853 ; Rise       ; clock           ;
+;  writedata[28] ; clock      ; -1.849 ; -1.849 ; Rise       ; clock           ;
+;  writedata[29] ; clock      ; -2.056 ; -2.056 ; Rise       ; clock           ;
+;  writedata[30] ; clock      ; -1.866 ; -1.866 ; Rise       ; clock           ;
+;  writedata[31] ; clock      ; -1.876 ; -1.876 ; Rise       ; clock           ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; readdata[*]   ; clock      ; 11.031 ; 11.031 ; Rise       ; clock           ;
+;  readdata[0]  ; clock      ; 8.855  ; 8.855  ; Rise       ; clock           ;
+;  readdata[1]  ; clock      ; 9.139  ; 9.139  ; Rise       ; clock           ;
+;  readdata[2]  ; clock      ; 8.062  ; 8.062  ; Rise       ; clock           ;
+;  readdata[3]  ; clock      ; 9.270  ; 9.270  ; Rise       ; clock           ;
+;  readdata[4]  ; clock      ; 10.117 ; 10.117 ; Rise       ; clock           ;
+;  readdata[5]  ; clock      ; 8.373  ; 8.373  ; Rise       ; clock           ;
+;  readdata[6]  ; clock      ; 8.446  ; 8.446  ; Rise       ; clock           ;
+;  readdata[7]  ; clock      ; 8.427  ; 8.427  ; Rise       ; clock           ;
+;  readdata[8]  ; clock      ; 10.384 ; 10.384 ; Rise       ; clock           ;
+;  readdata[9]  ; clock      ; 8.033  ; 8.033  ; Rise       ; clock           ;
+;  readdata[10] ; clock      ; 8.297  ; 8.297  ; Rise       ; clock           ;
+;  readdata[11] ; clock      ; 8.536  ; 8.536  ; Rise       ; clock           ;
+;  readdata[12] ; clock      ; 10.107 ; 10.107 ; Rise       ; clock           ;
+;  readdata[13] ; clock      ; 11.031 ; 11.031 ; Rise       ; clock           ;
+;  readdata[14] ; clock      ; 8.818  ; 8.818  ; Rise       ; clock           ;
+;  readdata[15] ; clock      ; 8.778  ; 8.778  ; Rise       ; clock           ;
+;  readdata[16] ; clock      ; 9.882  ; 9.882  ; Rise       ; clock           ;
+;  readdata[17] ; clock      ; 8.899  ; 8.899  ; Rise       ; clock           ;
+;  readdata[18] ; clock      ; 8.457  ; 8.457  ; Rise       ; clock           ;
+;  readdata[19] ; clock      ; 8.496  ; 8.496  ; Rise       ; clock           ;
+;  readdata[20] ; clock      ; 8.794  ; 8.794  ; Rise       ; clock           ;
+;  readdata[21] ; clock      ; 8.254  ; 8.254  ; Rise       ; clock           ;
+;  readdata[22] ; clock      ; 8.176  ; 8.176  ; Rise       ; clock           ;
+;  readdata[23] ; clock      ; 8.753  ; 8.753  ; Rise       ; clock           ;
+;  readdata[24] ; clock      ; 10.817 ; 10.817 ; Rise       ; clock           ;
+;  readdata[25] ; clock      ; 9.383  ; 9.383  ; Rise       ; clock           ;
+;  readdata[26] ; clock      ; 8.490  ; 8.490  ; Rise       ; clock           ;
+;  readdata[27] ; clock      ; 8.669  ; 8.669  ; Rise       ; clock           ;
+;  readdata[28] ; clock      ; 9.608  ; 9.608  ; Rise       ; clock           ;
+;  readdata[29] ; clock      ; 9.605  ; 9.605  ; Rise       ; clock           ;
+;  readdata[30] ; clock      ; 8.737  ; 8.737  ; Rise       ; clock           ;
+;  readdata[31] ; clock      ; 8.973  ; 8.973  ; Rise       ; clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; readdata[*]   ; clock      ; 3.883 ; 3.883 ; Rise       ; clock           ;
+;  readdata[0]  ; clock      ; 4.345 ; 4.345 ; Rise       ; clock           ;
+;  readdata[1]  ; clock      ; 4.286 ; 4.286 ; Rise       ; clock           ;
+;  readdata[2]  ; clock      ; 3.942 ; 3.942 ; Rise       ; clock           ;
+;  readdata[3]  ; clock      ; 3.939 ; 3.939 ; Rise       ; clock           ;
+;  readdata[4]  ; clock      ; 4.073 ; 4.073 ; Rise       ; clock           ;
+;  readdata[5]  ; clock      ; 3.956 ; 3.956 ; Rise       ; clock           ;
+;  readdata[6]  ; clock      ; 3.960 ; 3.960 ; Rise       ; clock           ;
+;  readdata[7]  ; clock      ; 4.127 ; 4.127 ; Rise       ; clock           ;
+;  readdata[8]  ; clock      ; 4.204 ; 4.204 ; Rise       ; clock           ;
+;  readdata[9]  ; clock      ; 3.928 ; 3.928 ; Rise       ; clock           ;
+;  readdata[10] ; clock      ; 3.883 ; 3.883 ; Rise       ; clock           ;
+;  readdata[11] ; clock      ; 3.920 ; 3.920 ; Rise       ; clock           ;
+;  readdata[12] ; clock      ; 4.285 ; 4.285 ; Rise       ; clock           ;
+;  readdata[13] ; clock      ; 4.062 ; 4.062 ; Rise       ; clock           ;
+;  readdata[14] ; clock      ; 4.063 ; 4.063 ; Rise       ; clock           ;
+;  readdata[15] ; clock      ; 3.924 ; 3.924 ; Rise       ; clock           ;
+;  readdata[16] ; clock      ; 4.207 ; 4.207 ; Rise       ; clock           ;
+;  readdata[17] ; clock      ; 4.172 ; 4.172 ; Rise       ; clock           ;
+;  readdata[18] ; clock      ; 4.115 ; 4.115 ; Rise       ; clock           ;
+;  readdata[19] ; clock      ; 4.170 ; 4.170 ; Rise       ; clock           ;
+;  readdata[20] ; clock      ; 4.138 ; 4.138 ; Rise       ; clock           ;
+;  readdata[21] ; clock      ; 4.060 ; 4.060 ; Rise       ; clock           ;
+;  readdata[22] ; clock      ; 4.032 ; 4.032 ; Rise       ; clock           ;
+;  readdata[23] ; clock      ; 4.186 ; 4.186 ; Rise       ; clock           ;
+;  readdata[24] ; clock      ; 4.046 ; 4.046 ; Rise       ; clock           ;
+;  readdata[25] ; clock      ; 4.294 ; 4.294 ; Rise       ; clock           ;
+;  readdata[26] ; clock      ; 4.021 ; 4.021 ; Rise       ; clock           ;
+;  readdata[27] ; clock      ; 4.021 ; 4.021 ; Rise       ; clock           ;
+;  readdata[28] ; clock      ; 4.217 ; 4.217 ; Rise       ; clock           ;
+;  readdata[29] ; clock      ; 4.080 ; 4.080 ; Rise       ; clock           ;
+;  readdata[30] ; clock      ; 4.017 ; 4.017 ; Rise       ; clock           ;
+;  readdata[31] ; clock      ; 4.035 ; 4.035 ; Rise       ; clock           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------+
+; Progagation Delay                                             ;
++------------+--------------+--------+--------+--------+--------+
+; Input Port ; Output Port  ; RR     ; RF     ; FR     ; FF     ;
++------------+--------------+--------+--------+--------+--------+
+; add[0]     ; readdata[0]  ; 11.979 ; 11.979 ; 11.979 ; 11.979 ;
+; add[0]     ; readdata[1]  ; 12.958 ; 12.958 ; 12.958 ; 12.958 ;
+; add[0]     ; readdata[2]  ; 11.192 ; 11.192 ; 11.192 ; 11.192 ;
+; add[0]     ; readdata[3]  ; 11.757 ; 11.757 ; 11.757 ; 11.757 ;
+; add[0]     ; readdata[4]  ; 12.606 ; 12.606 ; 12.606 ; 12.606 ;
+; add[0]     ; readdata[5]  ; 11.519 ; 11.519 ; 11.519 ; 11.519 ;
+; add[0]     ; readdata[6]  ; 11.522 ; 11.522 ; 11.522 ; 11.522 ;
+; add[0]     ; readdata[7]  ; 11.531 ; 11.531 ; 11.531 ; 11.531 ;
+; add[0]     ; readdata[8]  ; 12.867 ; 12.867 ; 12.867 ; 12.867 ;
+; add[0]     ; readdata[9]  ; 11.165 ; 11.165 ; 11.165 ; 11.165 ;
+; add[0]     ; readdata[10] ; 11.431 ; 11.431 ; 11.431 ; 11.431 ;
+; add[0]     ; readdata[11] ; 11.968 ; 11.968 ; 11.968 ; 11.968 ;
+; add[0]     ; readdata[12] ; 13.824 ; 13.824 ; 13.824 ; 13.824 ;
+; add[0]     ; readdata[13] ; 12.743 ; 12.743 ; 12.743 ; 12.743 ;
+; add[0]     ; readdata[14] ; 12.257 ; 12.257 ; 12.257 ; 12.257 ;
+; add[0]     ; readdata[15] ; 12.209 ; 12.209 ; 12.209 ; 12.209 ;
+; add[0]     ; readdata[16] ; 13.598 ; 13.598 ; 13.598 ; 13.598 ;
+; add[0]     ; readdata[17] ; 12.688 ; 12.688 ; 12.688 ; 12.688 ;
+; add[0]     ; readdata[18] ; 11.624 ; 11.624 ; 11.624 ; 11.624 ;
+; add[0]     ; readdata[19] ; 12.733 ; 12.733 ; 12.733 ; 12.733 ;
+; add[0]     ; readdata[20] ; 12.733 ; 12.733 ; 12.733 ; 12.733 ;
+; add[0]     ; readdata[21] ; 12.421 ; 12.421 ; 12.421 ; 12.421 ;
+; add[0]     ; readdata[22] ; 12.411 ; 12.411 ; 12.411 ; 12.411 ;
+; add[0]     ; readdata[23] ; 12.688 ; 12.688 ; 12.688 ; 12.688 ;
+; add[0]     ; readdata[24] ; 12.545 ; 12.545 ; 12.545 ; 12.545 ;
+; add[0]     ; readdata[25] ; 12.990 ; 12.990 ; 12.990 ; 12.990 ;
+; add[0]     ; readdata[26] ; 11.781 ; 11.781 ; 11.781 ; 11.781 ;
+; add[0]     ; readdata[27] ; 11.734 ; 11.734 ; 11.734 ; 11.734 ;
+; add[0]     ; readdata[28] ; 12.595 ; 12.595 ; 12.595 ; 12.595 ;
+; add[0]     ; readdata[29] ; 11.610 ; 11.610 ; 11.610 ; 11.610 ;
+; add[0]     ; readdata[30] ; 11.502 ; 11.502 ; 11.502 ; 11.502 ;
+; add[0]     ; readdata[31] ; 11.476 ; 11.476 ; 11.476 ; 11.476 ;
+; add[1]     ; readdata[0]  ; 12.586 ; 12.586 ; 12.586 ; 12.586 ;
+; add[1]     ; readdata[1]  ; 12.626 ; 12.626 ; 12.626 ; 12.626 ;
+; add[1]     ; readdata[2]  ; 11.560 ; 11.560 ; 11.560 ; 11.560 ;
+; add[1]     ; readdata[3]  ; 11.308 ; 11.308 ; 11.308 ; 11.308 ;
+; add[1]     ; readdata[4]  ; 12.644 ; 12.644 ; 12.644 ; 12.644 ;
+; add[1]     ; readdata[5]  ; 11.328 ; 11.328 ; 11.328 ; 11.328 ;
+; add[1]     ; readdata[6]  ; 11.331 ; 11.331 ; 11.331 ; 11.331 ;
+; add[1]     ; readdata[7]  ; 11.909 ; 11.909 ; 11.909 ; 11.909 ;
+; add[1]     ; readdata[8]  ; 12.930 ; 12.930 ; 12.930 ; 12.930 ;
+; add[1]     ; readdata[9]  ; 11.527 ; 11.527 ; 11.527 ; 11.527 ;
+; add[1]     ; readdata[10] ; 11.234 ; 11.234 ; 11.234 ; 11.234 ;
+; add[1]     ; readdata[11] ; 11.275 ; 12.386 ; 12.386 ; 11.275 ;
+; add[1]     ; readdata[12] ; 13.128 ; 14.484 ; 14.484 ; 13.128 ;
+; add[1]     ; readdata[13] ; 12.808 ; 13.951 ; 13.951 ; 12.808 ;
+; add[1]     ; readdata[14] ; 11.579 ; 12.671 ; 12.671 ; 11.579 ;
+; add[1]     ; readdata[15] ; 11.265 ; 12.626 ; 12.626 ; 11.265 ;
+; add[1]     ; readdata[16] ; 12.936 ; 14.258 ; 14.258 ; 12.936 ;
+; add[1]     ; readdata[17] ; 12.862 ; 13.661 ; 13.661 ; 12.862 ;
+; add[1]     ; readdata[18] ; 12.870 ; 13.981 ; 13.981 ; 12.870 ;
+; add[1]     ; readdata[19] ; 12.874 ; 14.019 ; 14.019 ; 12.874 ;
+; add[1]     ; readdata[20] ; 12.835 ; 13.732 ; 13.732 ; 12.835 ;
+; add[1]     ; readdata[21] ; 12.662 ; 13.782 ; 13.782 ; 12.662 ;
+; add[1]     ; readdata[22] ; 12.610 ; 13.710 ; 13.710 ; 12.610 ;
+; add[1]     ; readdata[23] ; 12.897 ; 13.692 ; 13.692 ; 12.897 ;
+; add[1]     ; readdata[24] ; 12.613 ; 13.753 ; 13.753 ; 12.613 ;
+; add[1]     ; readdata[25] ; 12.658 ; 13.113 ; 13.113 ; 12.658 ;
+; add[1]     ; readdata[26] ; 11.500 ; 12.726 ; 12.726 ; 11.500 ;
+; add[1]     ; readdata[27] ; 11.488 ; 12.669 ; 12.669 ; 11.488 ;
+; add[1]     ; readdata[28] ; 11.861 ; 13.009 ; 13.009 ; 11.861 ;
+; add[1]     ; readdata[29] ; 11.604 ; 12.823 ; 12.823 ; 11.604 ;
+; add[1]     ; readdata[30] ; 11.486 ; 12.712 ; 12.712 ; 11.486 ;
+; add[1]     ; readdata[31] ; 11.510 ; 12.686 ; 12.686 ; 11.510 ;
+; chipselect ; readdata[0]  ; 12.742 ; 12.742 ; 12.742 ; 12.742 ;
+; chipselect ; readdata[1]  ; 12.783 ; 12.783 ; 12.783 ; 12.783 ;
+; chipselect ; readdata[2]  ; 11.716 ; 11.716 ; 11.716 ; 11.716 ;
+; chipselect ; readdata[3]  ; 11.464 ; 11.464 ; 11.464 ; 11.464 ;
+; chipselect ; readdata[4]  ; 12.800 ; 12.800 ; 12.800 ; 12.800 ;
+; chipselect ; readdata[5]  ; 11.484 ; 11.484 ; 11.484 ; 11.484 ;
+; chipselect ; readdata[6]  ; 11.487 ; 11.487 ; 11.487 ; 11.487 ;
+; chipselect ; readdata[7]  ; 12.065 ; 12.065 ; 12.065 ; 12.065 ;
+; chipselect ; readdata[8]  ; 13.086 ; 13.086 ; 13.086 ; 13.086 ;
+; chipselect ; readdata[9]  ; 11.683 ; 11.683 ; 11.683 ; 11.683 ;
+; chipselect ; readdata[10] ; 11.390 ; 11.390 ; 11.390 ; 11.390 ;
+; chipselect ; readdata[11] ; 12.542 ; 11.431 ; 11.431 ; 12.542 ;
+; chipselect ; readdata[12] ; 14.640 ; 13.284 ; 13.284 ; 14.640 ;
+; chipselect ; readdata[13] ; 14.107 ; 12.964 ; 12.964 ; 14.107 ;
+; chipselect ; readdata[14] ; 12.827 ; 11.735 ; 11.735 ; 12.827 ;
+; chipselect ; readdata[15] ; 12.782 ; 11.421 ; 11.421 ; 12.782 ;
+; chipselect ; readdata[16] ; 14.414 ; 13.092 ; 13.092 ; 14.414 ;
+; chipselect ; readdata[17] ; 13.817 ; 13.018 ; 13.018 ; 13.817 ;
+; chipselect ; readdata[18] ; 14.137 ; 13.026 ; 13.026 ; 14.137 ;
+; chipselect ; readdata[19] ; 14.175 ; 13.030 ; 13.030 ; 14.175 ;
+; chipselect ; readdata[20] ; 13.888 ; 12.991 ; 12.991 ; 13.888 ;
+; chipselect ; readdata[21] ; 13.938 ; 12.818 ; 12.818 ; 13.938 ;
+; chipselect ; readdata[22] ; 13.866 ; 12.766 ; 12.766 ; 13.866 ;
+; chipselect ; readdata[23] ; 13.848 ; 13.053 ; 13.053 ; 13.848 ;
+; chipselect ; readdata[24] ; 13.909 ; 12.769 ; 12.769 ; 13.909 ;
+; chipselect ; readdata[25] ; 13.269 ; 12.815 ; 12.815 ; 13.269 ;
+; chipselect ; readdata[26] ; 12.882 ; 11.656 ; 11.656 ; 12.882 ;
+; chipselect ; readdata[27] ; 12.825 ; 11.644 ; 11.644 ; 12.825 ;
+; chipselect ; readdata[28] ; 13.165 ; 12.017 ; 12.017 ; 13.165 ;
+; chipselect ; readdata[29] ; 12.979 ; 11.760 ; 11.760 ; 12.979 ;
+; chipselect ; readdata[30] ; 12.868 ; 11.642 ; 11.642 ; 12.868 ;
+; chipselect ; readdata[31] ; 12.842 ; 11.666 ; 11.666 ; 12.842 ;
+; read_en    ; readdata[0]  ; 12.833 ; 12.833 ; 12.833 ; 12.833 ;
+; read_en    ; readdata[1]  ; 12.873 ; 12.873 ; 12.873 ; 12.873 ;
+; read_en    ; readdata[2]  ; 11.807 ; 11.807 ; 11.807 ; 11.807 ;
+; read_en    ; readdata[3]  ; 11.555 ; 11.555 ; 11.555 ; 11.555 ;
+; read_en    ; readdata[4]  ; 12.891 ; 12.891 ; 12.891 ; 12.891 ;
+; read_en    ; readdata[5]  ; 11.575 ; 11.575 ; 11.575 ; 11.575 ;
+; read_en    ; readdata[6]  ; 11.578 ; 11.578 ; 11.578 ; 11.578 ;
+; read_en    ; readdata[7]  ; 12.156 ; 12.156 ; 12.156 ; 12.156 ;
+; read_en    ; readdata[8]  ; 13.177 ; 13.177 ; 13.177 ; 13.177 ;
+; read_en    ; readdata[9]  ; 11.774 ; 11.774 ; 11.774 ; 11.774 ;
+; read_en    ; readdata[10] ; 11.481 ; 11.481 ; 11.481 ; 11.481 ;
+; read_en    ; readdata[11] ; 12.633 ; 11.522 ; 11.522 ; 12.633 ;
+; read_en    ; readdata[12] ; 14.731 ; 13.375 ; 13.375 ; 14.731 ;
+; read_en    ; readdata[13] ; 14.198 ; 13.055 ; 13.055 ; 14.198 ;
+; read_en    ; readdata[14] ; 12.918 ; 11.826 ; 11.826 ; 12.918 ;
+; read_en    ; readdata[15] ; 12.873 ; 11.512 ; 11.512 ; 12.873 ;
+; read_en    ; readdata[16] ; 14.505 ; 13.183 ; 13.183 ; 14.505 ;
+; read_en    ; readdata[17] ; 13.908 ; 13.109 ; 13.109 ; 13.908 ;
+; read_en    ; readdata[18] ; 14.228 ; 13.117 ; 13.117 ; 14.228 ;
+; read_en    ; readdata[19] ; 14.266 ; 13.121 ; 13.121 ; 14.266 ;
+; read_en    ; readdata[20] ; 13.979 ; 13.082 ; 13.082 ; 13.979 ;
+; read_en    ; readdata[21] ; 14.029 ; 12.909 ; 12.909 ; 14.029 ;
+; read_en    ; readdata[22] ; 13.957 ; 12.857 ; 12.857 ; 13.957 ;
+; read_en    ; readdata[23] ; 13.939 ; 13.144 ; 13.144 ; 13.939 ;
+; read_en    ; readdata[24] ; 14.000 ; 12.860 ; 12.860 ; 14.000 ;
+; read_en    ; readdata[25] ; 13.360 ; 12.905 ; 12.905 ; 13.360 ;
+; read_en    ; readdata[26] ; 12.973 ; 11.747 ; 11.747 ; 12.973 ;
+; read_en    ; readdata[27] ; 12.916 ; 11.735 ; 11.735 ; 12.916 ;
+; read_en    ; readdata[28] ; 13.256 ; 12.108 ; 12.108 ; 13.256 ;
+; read_en    ; readdata[29] ; 13.070 ; 11.851 ; 11.851 ; 13.070 ;
+; read_en    ; readdata[30] ; 12.959 ; 11.733 ; 11.733 ; 12.959 ;
+; read_en    ; readdata[31] ; 12.933 ; 11.757 ; 11.757 ; 12.933 ;
++------------+--------------+--------+--------+--------+--------+
+
+
++-----------------------------------------------------------+
+; Minimum Progagation Delay                                 ;
++------------+--------------+-------+-------+-------+-------+
+; Input Port ; Output Port  ; RR    ; RF    ; FR    ; FF    ;
++------------+--------------+-------+-------+-------+-------+
+; add[0]     ; readdata[0]  ; 6.142 ; 6.142 ; 6.142 ; 6.142 ;
+; add[0]     ; readdata[1]  ; 6.367 ; 6.367 ; 6.367 ; 6.367 ;
+; add[0]     ; readdata[2]  ; 5.913 ; 5.913 ; 5.913 ; 5.913 ;
+; add[0]     ; readdata[3]  ; 5.934 ; 5.934 ; 5.934 ; 5.934 ;
+; add[0]     ; readdata[4]  ; 6.728 ; 6.728 ; 6.728 ; 6.728 ;
+; add[0]     ; readdata[5]  ; 5.960 ; 5.960 ; 5.960 ; 5.960 ;
+; add[0]     ; readdata[6]  ; 5.961 ; 5.961 ; 5.961 ; 5.961 ;
+; add[0]     ; readdata[7]  ; 6.101 ; 6.101 ; 6.101 ; 6.101 ;
+; add[0]     ; readdata[8]  ; 6.847 ; 6.847 ; 6.847 ; 6.847 ;
+; add[0]     ; readdata[9]  ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; add[0]     ; readdata[10] ; 5.908 ; 5.908 ; 5.908 ; 5.908 ;
+; add[0]     ; readdata[11] ; 5.950 ; 5.950 ; 5.950 ; 5.950 ;
+; add[0]     ; readdata[12] ; 6.831 ; 6.831 ; 6.831 ; 6.831 ;
+; add[0]     ; readdata[13] ; 6.101 ; 6.101 ; 6.101 ; 6.101 ;
+; add[0]     ; readdata[14] ; 6.064 ; 6.064 ; 6.064 ; 6.064 ;
+; add[0]     ; readdata[15] ; 5.960 ; 5.960 ; 5.960 ; 5.960 ;
+; add[0]     ; readdata[16] ; 6.857 ; 6.857 ; 6.857 ; 6.857 ;
+; add[0]     ; readdata[17] ; 6.336 ; 6.336 ; 6.336 ; 6.336 ;
+; add[0]     ; readdata[18] ; 6.121 ; 6.121 ; 6.121 ; 6.121 ;
+; add[0]     ; readdata[19] ; 6.345 ; 6.345 ; 6.345 ; 6.345 ;
+; add[0]     ; readdata[20] ; 6.355 ; 6.355 ; 6.355 ; 6.355 ;
+; add[0]     ; readdata[21] ; 6.226 ; 6.226 ; 6.226 ; 6.226 ;
+; add[0]     ; readdata[22] ; 6.192 ; 6.192 ; 6.192 ; 6.192 ;
+; add[0]     ; readdata[23] ; 6.349 ; 6.349 ; 6.349 ; 6.349 ;
+; add[0]     ; readdata[24] ; 6.518 ; 6.518 ; 6.518 ; 6.518 ;
+; add[0]     ; readdata[25] ; 6.497 ; 6.497 ; 6.497 ; 6.497 ;
+; add[0]     ; readdata[26] ; 5.934 ; 5.934 ; 5.934 ; 5.934 ;
+; add[0]     ; readdata[27] ; 5.923 ; 5.923 ; 5.923 ; 5.923 ;
+; add[0]     ; readdata[28] ; 6.101 ; 6.101 ; 6.101 ; 6.101 ;
+; add[0]     ; readdata[29] ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; add[0]     ; readdata[30] ; 5.950 ; 5.950 ; 5.950 ; 5.950 ;
+; add[0]     ; readdata[31] ; 5.961 ; 5.961 ; 5.961 ; 5.961 ;
+; add[1]     ; readdata[0]  ; 6.389 ; 6.389 ; 6.389 ; 6.389 ;
+; add[1]     ; readdata[1]  ; 6.540 ; 6.540 ; 6.540 ; 6.540 ;
+; add[1]     ; readdata[2]  ; 5.784 ; 5.784 ; 5.784 ; 5.784 ;
+; add[1]     ; readdata[3]  ; 5.805 ; 5.805 ; 5.805 ; 5.805 ;
+; add[1]     ; readdata[4]  ; 6.599 ; 6.599 ; 6.599 ; 6.599 ;
+; add[1]     ; readdata[5]  ; 5.831 ; 5.831 ; 5.831 ; 5.831 ;
+; add[1]     ; readdata[6]  ; 5.832 ; 5.832 ; 5.832 ; 5.832 ;
+; add[1]     ; readdata[7]  ; 5.972 ; 5.972 ; 5.972 ; 5.972 ;
+; add[1]     ; readdata[8]  ; 6.718 ; 6.718 ; 6.718 ; 6.718 ;
+; add[1]     ; readdata[9]  ; 5.822 ; 5.822 ; 5.822 ; 5.822 ;
+; add[1]     ; readdata[10] ; 5.779 ; 5.779 ; 5.779 ; 5.779 ;
+; add[1]     ; readdata[11] ; 5.821 ; 5.821 ; 5.821 ; 5.821 ;
+; add[1]     ; readdata[12] ; 6.702 ; 6.702 ; 6.702 ; 6.702 ;
+; add[1]     ; readdata[13] ; 5.972 ; 5.972 ; 5.972 ; 5.972 ;
+; add[1]     ; readdata[14] ; 5.935 ; 5.935 ; 5.935 ; 5.935 ;
+; add[1]     ; readdata[15] ; 5.831 ; 5.831 ; 5.831 ; 5.831 ;
+; add[1]     ; readdata[16] ; 6.728 ; 6.728 ; 6.728 ; 6.728 ;
+; add[1]     ; readdata[17] ; 6.703 ; 6.703 ; 6.703 ; 6.703 ;
+; add[1]     ; readdata[18] ; 5.992 ; 5.992 ; 5.992 ; 5.992 ;
+; add[1]     ; readdata[19] ; 6.728 ; 6.728 ; 6.728 ; 6.728 ;
+; add[1]     ; readdata[20] ; 6.728 ; 6.728 ; 6.728 ; 6.728 ;
+; add[1]     ; readdata[21] ; 6.569 ; 6.569 ; 6.569 ; 6.569 ;
+; add[1]     ; readdata[22] ; 6.559 ; 6.559 ; 6.559 ; 6.559 ;
+; add[1]     ; readdata[23] ; 6.703 ; 6.703 ; 6.703 ; 6.703 ;
+; add[1]     ; readdata[24] ; 6.389 ; 6.389 ; 6.389 ; 6.389 ;
+; add[1]     ; readdata[25] ; 6.509 ; 6.860 ; 6.860 ; 6.509 ;
+; add[1]     ; readdata[26] ; 5.805 ; 5.805 ; 5.805 ; 5.805 ;
+; add[1]     ; readdata[27] ; 5.794 ; 5.794 ; 5.794 ; 5.794 ;
+; add[1]     ; readdata[28] ; 5.972 ; 5.972 ; 5.972 ; 5.972 ;
+; add[1]     ; readdata[29] ; 5.822 ; 5.822 ; 5.822 ; 5.822 ;
+; add[1]     ; readdata[30] ; 5.821 ; 5.821 ; 5.821 ; 5.821 ;
+; add[1]     ; readdata[31] ; 5.832 ; 5.832 ; 5.832 ; 5.832 ;
+; chipselect ; readdata[0]  ; 6.439 ; 6.439 ; 6.439 ; 6.439 ;
+; chipselect ; readdata[1]  ; 6.589 ; 6.589 ; 6.589 ; 6.589 ;
+; chipselect ; readdata[2]  ; 5.834 ; 5.834 ; 5.834 ; 5.834 ;
+; chipselect ; readdata[3]  ; 5.855 ; 5.855 ; 5.855 ; 5.855 ;
+; chipselect ; readdata[4]  ; 6.649 ; 6.649 ; 6.649 ; 6.649 ;
+; chipselect ; readdata[5]  ; 5.881 ; 5.881 ; 5.881 ; 5.881 ;
+; chipselect ; readdata[6]  ; 5.882 ; 5.882 ; 5.882 ; 5.882 ;
+; chipselect ; readdata[7]  ; 6.022 ; 6.022 ; 6.022 ; 6.022 ;
+; chipselect ; readdata[8]  ; 6.768 ; 6.768 ; 6.768 ; 6.768 ;
+; chipselect ; readdata[9]  ; 5.872 ; 5.872 ; 5.872 ; 5.872 ;
+; chipselect ; readdata[10] ; 5.829 ; 5.829 ; 5.829 ; 5.829 ;
+; chipselect ; readdata[11] ; 5.871 ; 5.871 ; 5.871 ; 5.871 ;
+; chipselect ; readdata[12] ; 6.752 ; 6.752 ; 6.752 ; 6.752 ;
+; chipselect ; readdata[13] ; 6.022 ; 6.022 ; 6.022 ; 6.022 ;
+; chipselect ; readdata[14] ; 5.985 ; 5.985 ; 5.985 ; 5.985 ;
+; chipselect ; readdata[15] ; 5.881 ; 5.881 ; 5.881 ; 5.881 ;
+; chipselect ; readdata[16] ; 6.778 ; 6.778 ; 6.778 ; 6.778 ;
+; chipselect ; readdata[17] ; 6.753 ; 6.753 ; 6.753 ; 6.753 ;
+; chipselect ; readdata[18] ; 6.042 ; 6.042 ; 6.042 ; 6.042 ;
+; chipselect ; readdata[19] ; 6.778 ; 6.778 ; 6.778 ; 6.778 ;
+; chipselect ; readdata[20] ; 6.778 ; 6.778 ; 6.778 ; 6.778 ;
+; chipselect ; readdata[21] ; 6.619 ; 6.619 ; 6.619 ; 6.619 ;
+; chipselect ; readdata[22] ; 6.609 ; 6.609 ; 6.609 ; 6.609 ;
+; chipselect ; readdata[23] ; 6.753 ; 6.753 ; 6.753 ; 6.753 ;
+; chipselect ; readdata[24] ; 6.439 ; 6.439 ; 6.439 ; 6.439 ;
+; chipselect ; readdata[25] ; 6.910 ; 6.558 ; 6.558 ; 6.910 ;
+; chipselect ; readdata[26] ; 5.855 ; 5.855 ; 5.855 ; 5.855 ;
+; chipselect ; readdata[27] ; 5.844 ; 5.844 ; 5.844 ; 5.844 ;
+; chipselect ; readdata[28] ; 6.022 ; 6.022 ; 6.022 ; 6.022 ;
+; chipselect ; readdata[29] ; 5.872 ; 5.872 ; 5.872 ; 5.872 ;
+; chipselect ; readdata[30] ; 5.871 ; 5.871 ; 5.871 ; 5.871 ;
+; chipselect ; readdata[31] ; 5.882 ; 5.882 ; 5.882 ; 5.882 ;
+; read_en    ; readdata[0]  ; 6.495 ; 6.495 ; 6.495 ; 6.495 ;
+; read_en    ; readdata[1]  ; 6.647 ; 6.647 ; 6.647 ; 6.647 ;
+; read_en    ; readdata[2]  ; 5.890 ; 5.890 ; 5.890 ; 5.890 ;
+; read_en    ; readdata[3]  ; 5.911 ; 5.911 ; 5.911 ; 5.911 ;
+; read_en    ; readdata[4]  ; 6.705 ; 6.705 ; 6.705 ; 6.705 ;
+; read_en    ; readdata[5]  ; 5.937 ; 5.937 ; 5.937 ; 5.937 ;
+; read_en    ; readdata[6]  ; 5.938 ; 5.938 ; 5.938 ; 5.938 ;
+; read_en    ; readdata[7]  ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; read_en    ; readdata[8]  ; 6.824 ; 6.824 ; 6.824 ; 6.824 ;
+; read_en    ; readdata[9]  ; 5.928 ; 5.928 ; 5.928 ; 5.928 ;
+; read_en    ; readdata[10] ; 5.885 ; 5.885 ; 5.885 ; 5.885 ;
+; read_en    ; readdata[11] ; 5.927 ; 5.927 ; 5.927 ; 5.927 ;
+; read_en    ; readdata[12] ; 6.808 ; 6.808 ; 6.808 ; 6.808 ;
+; read_en    ; readdata[13] ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; read_en    ; readdata[14] ; 6.041 ; 6.041 ; 6.041 ; 6.041 ;
+; read_en    ; readdata[15] ; 5.937 ; 5.937 ; 5.937 ; 5.937 ;
+; read_en    ; readdata[16] ; 6.834 ; 6.834 ; 6.834 ; 6.834 ;
+; read_en    ; readdata[17] ; 6.809 ; 6.809 ; 6.809 ; 6.809 ;
+; read_en    ; readdata[18] ; 6.098 ; 6.098 ; 6.098 ; 6.098 ;
+; read_en    ; readdata[19] ; 6.834 ; 6.834 ; 6.834 ; 6.834 ;
+; read_en    ; readdata[20] ; 6.834 ; 6.834 ; 6.834 ; 6.834 ;
+; read_en    ; readdata[21] ; 6.675 ; 6.675 ; 6.675 ; 6.675 ;
+; read_en    ; readdata[22] ; 6.665 ; 6.665 ; 6.665 ; 6.665 ;
+; read_en    ; readdata[23] ; 6.809 ; 6.809 ; 6.809 ; 6.809 ;
+; read_en    ; readdata[24] ; 6.495 ; 6.495 ; 6.495 ; 6.495 ;
+; read_en    ; readdata[25] ; 6.966 ; 6.616 ; 6.616 ; 6.966 ;
+; read_en    ; readdata[26] ; 5.911 ; 5.911 ; 5.911 ; 5.911 ;
+; read_en    ; readdata[27] ; 5.900 ; 5.900 ; 5.900 ; 5.900 ;
+; read_en    ; readdata[28] ; 6.078 ; 6.078 ; 6.078 ; 6.078 ;
+; read_en    ; readdata[29] ; 5.928 ; 5.928 ; 5.928 ; 5.928 ;
+; read_en    ; readdata[30] ; 5.927 ; 5.927 ; 5.927 ; 5.927 ;
+; read_en    ; readdata[31] ; 5.938 ; 5.938 ; 5.938 ; 5.938 ;
++------------+--------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 38    ; 38   ;
+; Unconstrained Input Port Paths  ; 704   ; 704  ;
+; Unconstrained Output Ports      ; 32    ; 32   ;
+; Unconstrained Output Port Paths ; 224   ; 224  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Dec 11 11:11:51 2024
+Info: Command: quartus_sta nios -c nios
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'nios.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -97.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -97.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4587 megabytes
+    Info: Processing ended: Wed Dec 11 11:11:52 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,51 +1,70 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
-USE ieee.numeric_std.all; -- Include this package for `to_unsigned`
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-ENTITY bram_tb IS
-END bram_tb;
+entity bram_tb is
+end entity;
 
-ARCHITECTURE behavior OF bram_tb IS
-    -- Component Declaration for the Unit Under Test (UUT)
-    COMPONENT bram
-    PORT(
-        address : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-        clock   : IN STD_LOGIC;
-        q       : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
-    );
-    END COMPONENT;
+architecture behavior of bram_tb is
+    -- Component Declaration
+    component bram
+        port (
+            address : in std_logic_vector(9 downto 0);
+            clock   : in std_logic;
+            data    : in std_logic_vector(7 downto 0);
+            wren    : in std_logic;
+            q       : out std_logic_vector(7 downto 0)
+        );
+    end component;
 
-    -- Signals to connect to the UUT
-    SIGNAL address : STD_LOGIC_VECTOR(9 DOWNTO 0) := (others => '0');
-    SIGNAL clock   : STD_LOGIC := '0';
-    SIGNAL q       : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    -- Testbench Signals
+    signal clk     : std_logic := '0';
+    signal addr    : std_logic_vector(9 downto 0);
+    signal data_in : std_logic_vector(7 downto 0);
+    signal wren    : std_logic;
+    signal data_out : std_logic_vector(7 downto 0);
 
-BEGIN
-    -- Instantiate the Unit Under Test (UUT)
-    uut: bram PORT MAP (
-        address => address,
-        clock   => clock,
-        q       => q
-    );
+begin
+    -- Instantiate BRAM
+    uut : bram
+        port map (
+            address => addr,
+            clock   => clk,
+            data    => data_in,
+            wren    => wren,
+            q       => data_out
+        );
 
-    -- Clock generation
-    clock_process : PROCESS
-    BEGIN
-        clock <= '0';
-        WAIT FOR 10 ns;
-        clock <= '1';
-        WAIT FOR 10 ns;
-    END PROCESS;
+    -- Clock Generation
+    clock_process : process
+    begin
+        clk <= '0';
+        wait for 10 ns;
+        clk <= '1';
+        wait for 10 ns;
+    end process;
 
-    -- Stimulus process
-    stim_proc: PROCESS
-    BEGIN
-        -- Read data at various addresses
-        FOR i IN 0 TO 1023 LOOP
-            address <= std_logic_vector(to_unsigned(i, 10)); -- Use `to_unsigned` to convert integer to std_logic_vector
-            WAIT FOR 20 ns;
-        END LOOP;
-        WAIT;
-    END PROCESS;
+    -- Testbench Stimulus
+    stim_proc : process
+    begin
+        -- Write data to BRAM
+        for i in 0 to 1023 loop
+            addr <= std_logic_vector(to_unsigned(i, 10));
+            data_in <= std_logic_vector(to_unsigned(i mod 256, 8)); -- Write 0-255 repeatedly
+            wren <= '1';
+            wait for 20 ns;
+        end loop;
 
-END behavior;
+        -- Read data from BRAM
+        wren <= '0'; -- Disable write
+        for i in 0 to 1023 loop
+            addr <= std_logic_vector(to_unsigned(i, 10));
+            wait for 20 ns;
+            assert data_out = std_logic_vector(to_unsigned(i mod 256, 8))
+            report "Data mismatch at address " & integer'image(i)
+            severity error;
+        end loop;
+
+        wait;
+    end process;
+end architecture;

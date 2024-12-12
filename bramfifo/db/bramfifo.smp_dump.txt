@@ -1,0 +1,8 @@
+
+State Machine - |control_logic|state
+Name state.RD_WAIT state.RD_FIFO state.WR_WAIT state.WR_FIFO state.RESET 
+state.RESET 0 0 0 0 0 
+state.WR_FIFO 0 0 0 1 1 
+state.WR_WAIT 0 0 1 0 1 
+state.RD_FIFO 0 1 0 0 1 
+state.RD_WAIT 1 0 0 0 1 

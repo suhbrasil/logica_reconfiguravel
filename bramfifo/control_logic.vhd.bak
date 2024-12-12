@@ -1,0 +1,71 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+ENTITY control_logic IS
+    PORT (
+        clk        : IN STD_LOGIC;
+        rst        : IN STD_LOGIC; -- Reset
+        cnt        : IN INTEGER;   -- FIFO count
+        wr_enable  : OUT STD_LOGIC; -- Write enable for FIFO
+        rd_enable  : OUT STD_LOGIC  -- Read enable for FIFO
+    );
+END control_logic;
+
+ARCHITECTURE behavior OF control_logic IS
+    TYPE state_type IS (RESET, WR_FIFO, WR_WAIT, RD_FIFO, RD_WAIT);
+    SIGNAL current_state, next_state : state_type;
+    SIGNAL wr_en, rd_en : STD_LOGIC := '0';
+
+BEGIN
+    -- Sequential Process for State Transition
+    PROCESS (clk, rst)
+    BEGIN
+        IF rst = '1' THEN
+            current_state <= RESET;
+        ELSIF rising_edge(clk) THEN
+            current_state <= next_state;
+        END IF;
+    END PROCESS;
+
+    -- Combinational Process for Next State and Outputs
+    PROCESS (current_state, cnt)
+    BEGIN
+        next_state <= current_state;
+        wr_en <= '0';
+        rd_en <= '0';
+
+        CASE current_state IS
+            WHEN RESET =>
+                next_state <= WR_FIFO;
+
+            WHEN WR_FIFO =>
+                wr_en <= '1';
+                IF cnt >= 75 THEN
+                    next_state <= WR_WAIT;
+                END IF;
+
+            WHEN WR_WAIT =>
+                IF cnt <= 50 THEN
+                    next_state <= WR_FIFO;
+                END IF;
+
+            WHEN RD_FIFO =>
+                rd_en <= '1';
+                IF cnt = 0 THEN
+                    next_state <= RD_WAIT;
+                END IF;
+
+            WHEN RD_WAIT =>
+                IF cnt /= 0 THEN
+                    next_state <= RD_FIFO;
+                END IF;
+
+            WHEN OTHERS =>
+                next_state <= RESET;
+        END CASE;
+    END PROCESS;
+
+    wr_enable <= wr_en;
+    rd_enable <= rd_en;
+END behavior;

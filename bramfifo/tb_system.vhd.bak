@@ -1,0 +1,75 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+ENTITY tb_system IS
+END tb_system;
+
+ARCHITECTURE behavior OF tb_system IS
+    COMPONENT bram IS
+        PORT (
+            address   : IN STD_LOGIC_VECTOR (9 DOWNTO 0);
+            clock     : IN STD_LOGIC;
+            data_in   : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+            data_out  : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+            we        : IN STD_LOGIC
+        );
+    END COMPONENT;
+
+    COMPONENT control_logic IS
+        PORT (
+            clk        : IN STD_LOGIC;
+            rst        : IN STD_LOGIC;
+            cnt        : IN INTEGER;
+            wr_enable  : OUT STD_LOGIC;
+            rd_enable  : OUT STD_LOGIC
+        );
+    END COMPONENT;
+
+    -- Signals
+    SIGNAL clock      : STD_LOGIC := '0';
+    SIGNAL reset      : STD_LOGIC := '1';
+    SIGNAL cnt        : INTEGER := 0;
+    SIGNAL wr_enable  : STD_LOGIC;
+    SIGNAL rd_enable  : STD_LOGIC;
+    SIGNAL bram_data  : STD_LOGIC_VECTOR(7 DOWNTO 0);
+    SIGNAL bram_addr  : STD_LOGIC_VECTOR(9 DOWNTO 0);
+
+BEGIN
+    -- Instantiate BRAM
+    bram_inst : bram
+        PORT MAP (
+            address   => bram_addr,
+            clock     => clock,
+            data_in   => (others => '0'),
+            data_out  => bram_data,
+            we        => wr_enable
+        );
+
+    -- Instantiate Control Logic
+    control_inst : control_logic
+        PORT MAP (
+            clk        => clock,
+            rst        => reset,
+            cnt        => cnt,
+            wr_enable  => wr_enable,
+            rd_enable  => rd_enable
+        );
+
+    -- Clock Generation
+    clock_process : PROCESS
+    BEGIN
+        clock <= '0';
+        WAIT FOR 10 ns;
+        clock <= '1';
+        WAIT FOR 10 ns;
+    END PROCESS;
+
+    -- Reset Release
+    reset_process : PROCESS
+    BEGIN
+        WAIT FOR 20 ns;
+        reset <= '0';
+        WAIT;
+    END PROCESS;
+END behavior;
